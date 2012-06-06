@@ -11,3 +11,18 @@ export HISTFILESIZE=$HISTSIZE
 export HISTCONTROL=ignoredups
 # Make some commands not show up in history
 export HISTIGNORE="ls:ls *:cd:cd -:pwd;exit:date:* --help"
+
+# CVS stuff for work
+if [ `uname -n` = ssm-webdev.glfc.forestry.ca ]; then
+   export CVSROOT=':ext:aeakett@cvs:/cvs'
+   export CVS_RSH='ssh'
+fi
+
+# git stuff
+export GIT_AUTHOR_NAME="Andrew Eakett"
+export GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"
+git config --global user.name "$GIT_AUTHOR_NAME"
+export GIT_AUTHOR_EMAIL="aeakett@gmail.com"
+export GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
+git config --global user.email "$GIT_AUTHOR_EMAIL"
+
