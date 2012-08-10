@@ -104,7 +104,7 @@ alias stfu="osascript -e 'set volume output muted true'"
 alias pumpitup="osascript -e 'set volume 7'"
 alias hax="growlnotify -a 'Activity Monitor' 'System error' -m 'WTF R U DOIN'"
 
-# Use cdf of it's installed
+# Use cdf of it's installed (https://github.com/aeakett/cdf)
 if [ -e ~/bin/cdf ]
 then
    alias df="cdf -h"
