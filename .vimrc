@@ -96,3 +96,6 @@ execute pathogen#infect()
 " set solarized colour theme
 set background=dark
 colorscheme solarized
+
+" turn on fancy formatting in powerline
+let g:Powerline_symbols = 'fancy'
