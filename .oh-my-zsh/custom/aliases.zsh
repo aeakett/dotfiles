@@ -89,7 +89,7 @@ fi
 if [ -e ~/bin/zsh ]
 then
    alias vim="~/bin/vim"
-	alias vi="~/bin/vim"
+   alias vi="~/bin/vim"
 fi
 
 
