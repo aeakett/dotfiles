@@ -80,7 +80,7 @@ function codepoint() {
 
 # Quickly define a word
 givedef(){
-   if [[ $# -ge 2 ]] then
+   if [[ $# -ge 2 ]]; then
       echo "givedef: too many arguments" >&2
       return 1
    else
