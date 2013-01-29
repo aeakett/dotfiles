@@ -1,5 +1,7 @@
 #launch zsh
-[ -f $HOME/bin/zsh ] && exec $HOME/bin/zsh -l
+export SHELL="/home/aeakett/bin/zsh"
+exec $SHELL -l
+#[ -f $HOME/bin/zsh ] && exec $HOME/bin/zsh -l
 
 # Load ~/.extra, ~/.bash_prompt, ~/.exports, ~/.aliases and ~/.functions
 # ~/.extra can be used for settings you don’t want to commit
