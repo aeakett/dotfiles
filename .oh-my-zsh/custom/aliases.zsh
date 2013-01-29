@@ -85,7 +85,12 @@ else
    alias df="df -h"
 fi
 
-
+# Use personal version of vim if available
+if [ -e ~/bin/zsh ]
+then
+   alias vim="~/bin/vim"
+	alias vi="~/bin/vim"
+fi
 
 
 
