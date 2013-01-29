@@ -99,3 +99,6 @@ colorscheme solarized
 
 " turn on fancy formatting in powerline
 let g:Powerline_symbols = 'fancy'
+
+" set solarized colours for powerline
+let g:Powerline_colorscheme='solarized256'

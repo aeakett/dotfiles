@@ -1,35 +1,40 @@
+#launch zsh
+export SHELL="/home/aeakett/bin/zsh"
+exec $SHELL -l
+#[ -f $HOME/bin/zsh ] && exec $HOME/bin/zsh -l
+
 # Load ~/.extra, ~/.bash_prompt, ~/.exports, ~/.aliases and ~/.functions
 # ~/.extra can be used for settings you don’t want to commit
-for file in ~/.{extra,bash_prompt,exports,aliases,functions}; do
-	[ -r "$file" ] && source "$file"
-done
-unset file
+#for file in ~/.{extra,bash_prompt,exports,aliases,functions}; do
+#	[ -r "$file" ] && source "$file"
+#done
+#unset file
 
 # Case-insensitive globbing (used in pathname expansion)
-shopt -s nocaseglob
+#shopt -s nocaseglob
 
 # Append to the Bash history file, rather than overwriting it
-shopt -s histappend
+#shopt -s histappend
 
 # Autocorrect typos in path names when using `cd`
-shopt -s cdspell
+#shopt -s cdspell
 
 # Prefer US English and use UTF-8
-export LC_ALL="en_US.UTF-8"
-export LANG="en_US"
+#export LC_ALL="en_US.UTF-8"
+#export LANG="en_US"
 
 # Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
-[ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2)" scp sftp ssh
+#[ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2)" scp sftp ssh
 
 # Add tab completion for `defaults read|write NSGlobalDomain`
 # You could just use `-g` instead, but I like being explicit
-complete -W "NSGlobalDomain" defaults
+#complete -W "NSGlobalDomain" defaults
 
 # Add `killall` tab completion for common apps
-complete -o "nospace" -W "Finder Dock Mail Safari iTunes iCal Address\ Book SystemUIServer" killall
+#complete -o "nospace" -W "Finder Dock Mail Safari iTunes iCal Address\ Book SystemUIServer" killall
 
-if [ `uname -n` = ssm-webdev.nrcan.gc.ca -o `uname -n` = ssm-webint.nrcan.gc.ca ]; then
-   if [ -f ~/.bashrc ]; then
-      . ~/.bashrc
-   fi
-fi
+#if [ `uname -n` = ssm-webdev.nrcan.gc.ca -o `uname -n` = ssm-webint.nrcan.gc.ca ]; then
+#   if [ -f ~/.bashrc ]; then
+#      . ~/.bashrc
+#   fi
+#fi
