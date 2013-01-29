@@ -27,12 +27,12 @@ set number
 " Enable syntax highlighting
 syntax on
 " Highlight current line
-set cursorline
+" set cursorline
 " Make tabs as wide as two spaces
 set tabstop=3
 " Show “invisible” characters
-set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
-set list
+"set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
+"set list
 " Highlight searches
 set hlsearch
 " Ignore case of searches
@@ -48,20 +48,20 @@ set noerrorbells
 " Don’t reset cursor to start of line when moving around.
 set nostartofline
 " Show the cursor position
-set ruler
+"set ruler
 " Don’t show the intro message when starting vim
 set shortmess=atI
 " Show the current mode
-set showmode
+"set showmode
 " Show the filename in the window titlebar
 set title
 " Show the (partial) command as it’s being typed
-set showcmd
+"set showcmd
 " Use relative line numbers
-if exists("&relativenumber")
-	set relativenumber
-	au BufReadPost * set relativenumber
-endif
+"if exists("&relativenumber")
+"	set relativenumber
+"	au BufReadPost * set relativenumber
+"endif
 " Start scrolling three lines before the horizontal window border
 set scrolloff=3
 
@@ -89,3 +89,13 @@ set bs=1
 set ai
 map F !} fmt
 colors ron
+
+" load pathogen
+execute pathogen#infect()
+
+" set solarized colour theme
+set background=dark
+colorscheme solarized
+
+" turn on fancy formatting in powerline
+let g:Powerline_symbols = 'fancy'
