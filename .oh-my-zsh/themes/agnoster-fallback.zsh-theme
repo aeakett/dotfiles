@@ -72,7 +72,7 @@ prompt_git() {
   local ref dirty
   if $(git rev-parse --is-inside-work-tree >/dev/null 2>&1); then
     dirty=$(parse_git_dirty)
-    ref=$(git symbolic-ref HEAD 2> /dev/null) || ref="➦ $(git show-ref --head -s --abbrev |head -n1 2> /dev/null)"
+    ref=$(git symbolic-ref HEAD 2> /dev/null) || ref="→ $(git show-ref --head -s --abbrev |head -n1 2> /dev/null)"
     if [[ -n $dirty ]]; then
       prompt_segment yellow black
     else
@@ -85,12 +85,12 @@ prompt_git() {
     zstyle ':vcs_info:*' enable git
     zstyle ':vcs_info:*' get-revision true
     zstyle ':vcs_info:*' check-for-changes true
-    zstyle ':vcs_info:*' stagedstr '✚'
+    zstyle ':vcs_info:*' stagedstr '+'
     zstyle ':vcs_info:git:*' unstagedstr '●'
     zstyle ':vcs_info:*' formats ' %u%c'
     zstyle ':vcs_info:*' actionformats '%u%c'
     vcs_info
-    echo -n "${ref/refs\/heads\// }${vcs_info_msg_0_}"
+    echo -n "${ref/refs\/heads\//ʎ }${vcs_info_msg_0_}"
   fi
 }
 
@@ -110,7 +110,7 @@ prompt_hg() {
 				# if working copy is clean
 				prompt_segment green black
 			fi
-			echo -n $(hg prompt " {rev}@{branch}") $st
+			echo -n $(hg prompt "ʎ {rev}@{branch}") $st
 		else
 			st=""
 			rev=$(hg id -n 2>/dev/null | sed 's/[^-0-9]//g')
@@ -124,7 +124,7 @@ prompt_hg() {
 			else
 				prompt_segment green black
 			fi
-			echo -n " $rev@$branch" $st
+			echo -n "ʎ $rev@$branch" $st
 		fi
 	fi
 }
@@ -151,7 +151,7 @@ prompt_status() {
   symbols=()
   [[ $RETVAL -ne 0 ]] && symbols+="%{%F{red}%}X"
   [[ $UID -eq 0 ]] && symbols+="%{%F{yellow}%}§"
-  [[ $(jobs -l | wc -l) -gt 0 ]] && symbols+="%{%F{cyan}%}⚙"
+  [[ $(jobs -l | wc -l) -gt 0 ]] && symbols+="%{%F{cyan}%}☼"
 
   [[ -n "$symbols" ]] && prompt_segment black default "$symbols"
 }
