@@ -92,7 +92,8 @@ then
    alias vi="~/bin/vim"
 fi
 
-
+# make sure to start tmux in UTF mode
+alias tmux="tmux -u"
 
 
 
