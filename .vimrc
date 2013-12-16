@@ -98,7 +98,10 @@ set background=dark
 colorscheme solarized
 
 " turn on fancy formatting in powerline
-let g:Powerline_symbols = 'fancy'
+"let g:Powerline_symbols = 'fancy'
 
 " set solarized colours for powerline
-let g:Powerline_colorscheme='solarized256'
+"let g:Powerline_colorscheme='solarized256'
+
+" turn on fancy formatting in airline
+let g:airline_powerline_fonts = 1
