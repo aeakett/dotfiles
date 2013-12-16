@@ -1,0 +1,6 @@
+[submodule ".vim/bundle/vim-airline"]
+	path = .vim/bundle/vim-airline
+	url = git@github.com:aeakett/vim-airline.git
+[submodule "bin/tmux-powerline"]
+	path = bin/tmux-powerline
+	url = git@github.com:aeakett/tmux-powerline.git
