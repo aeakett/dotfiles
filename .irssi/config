@@ -5,7 +5,7 @@ servers = (
     port = "6697";
     autoconnect = "false";
     use_ssl = "yes";
-    user_name = "dmondark";
+    user_name = "SadDM";
   },
   {
     address = "irc.dev";
@@ -13,7 +13,7 @@ servers = (
     port = "6667";
     autoconnect = "false";
     use_ssl = "no";
-    user_name = "dmondark";
+    user_name = "SadDM";
   }
 );
 
@@ -207,9 +207,9 @@ statusbar = {
 };
 settings = {
   core = {
-    real_name = "dmondark";
-    nick = "dmondark";
-    user_name = "dmondark";
+    real_name = "aeakett";
+    nick = "SadDM";
+    user_name = "aeakett";
   };
   "fe-text" = {
     actlist_sort = "refnum";
@@ -232,7 +232,7 @@ settings = {
   };
   "irc/core" = { lag_check_time = "1min"; };
 };
-hilights = ( { text = "dmondark"; nick = "yes"; word = "yes"; } );
+hilights = ( { text = "SadDM"; nick = "yes"; word = "yes"; } );
 logs = { };
 keyboard = (
   { key = "^G"; id = "multi"; data = "erase_line;insert_text /ws "; },

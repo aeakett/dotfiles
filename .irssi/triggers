@@ -1,2 +1,2 @@
 #Triggers file version 1.0
--all -nocase -regexp 'your_nick' -replace '\x02your_nick\x02' 
+-all -nocase -regexp 'SadDM' -replace '\x02SadDM\x02' 
