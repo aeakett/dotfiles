@@ -72,7 +72,7 @@ abstracts = {
   # text to insert at the beginning of each non-message line
   # %G = brightgreen (Solarized: base01, i.e. darkest gray)
   # %| probably right-aligns
-  line_start = " %G-!- ";
+  line_start = " %G⸨⦿⸩ ";
 
   # timestamp styling, nothing by default
   # %Y = brightyellow (Solarized: base00, i.e. 2nd darkest gray)
@@ -93,7 +93,7 @@ abstracts = {
 
   # nick host is printed
   # (that's the "email" address of a user)
-  nickhost = "<$*>";
+  nickhost = "$*";
 
   # server name is printed
   server = "%_$*%_";
@@ -135,7 +135,7 @@ abstracts = {
   ##
 
   # the basic styling of how to print message, $0 = nick mode, $1 = nick
-  msgnick = "%_<%_$0$1-%_>%_ %|";
+  msgnick = "%y$0$1- %n %|";
 
   # message from you is printed. "msgownnick" specifies the styling of the
   # nick ($0 part in msgnick) and "ownmsgnick" specifies the styling of the
@@ -177,13 +177,13 @@ abstracts = {
 
   # private message, $0 = nick, $1 = host
   # TODO: To test for Solarized
-  #privmsg = "[%m$0%K<%M$1-%K>%n] ";
-  privmsg = "[%m$0%G<%n$1-%G>%n] ";
+  #privmsg = "[%m$0%K%M$1-%K>%n] ";
+  privmsg = "[%m$0%G%n$1-%G%n] ";
 
   # private message from you, $0 = "msg", $1 = target nick
   # TODO: To test for Solarized
-  #ownprivmsg = "[%b$0%K<%B$1-%K>%n] ";
-  ownprivmsg = "[%b$0%G<%B$1-%G>%n] ";
+  #ownprivmsg = "[%b$0%K<%B$1-%K%n] ";
+  ownprivmsg = "[%b$0%G%B$1-%G%n] ";
 
   # own private message in query
   ownprivmsgnick = "{msgnick  $*}%b";
@@ -320,7 +320,7 @@ abstracts = {
   topicsbstart = "{sbstart $*}";
   topicsbend = "{sbend $*}";
 
-  prompt = "$c$*%n> ";
+  prompt = "$c$*%n  ";
 
   # This controls each part of a statusbor, including the outer brackets of adv_windowlist
   sb = " $* ";
@@ -369,6 +369,10 @@ abstracts = {
 
 formats = {
   "fe-common/core" = {
+	 join = "%g%N$[-9]0 {chanhost $1} joins $2";
+	 part = "%g%N$[-9]0 {chanhost $1} leaves $2 {reason $3}";
+	 quit = "%g%N$[-9]0 {chanhost $1} quits {reason $2}";
+	 kick = "%R%N$[-9]0 was kicked from {channel $1} by $2 {reason $3}";
     daychange = "           %g-----%w-%W-%n Day changed to %%D %W-%w-%g-----%n";
   };
 };

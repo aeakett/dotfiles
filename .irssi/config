@@ -120,7 +120,7 @@ statusbar = {
     lag = "{sb %r⮂%w%1 $0 %r%0%n}";
     #act = "{sb Act: $0-}";
     act = "{sb %y%0%n%3  %F$0%F  %n}";
-    more = "%c%0⮂%n%6 more ⬇ %c%0%n";
+    more = "%c%0%n%6 more ⬇ %c%0%n";
 
     # Solarized
   };
@@ -206,11 +206,7 @@ statusbar = {
   };
 };
 settings = {
-  core = {
-    real_name = "aeakett";
-    nick = "SadDM";
-    user_name = "aeakett";
-  };
+  core = { real_name = "aeakett"; nick = "SadDM"; user_name = "aeakett"; };
   "fe-text" = {
     actlist_sort = "refnum";
     autostick_split_windows = "no";
@@ -229,6 +225,7 @@ settings = {
     beep_msg_level = "MSGS NOTICES DCC DCCMSGS HILIGHT";
     beep_when_away = "no";
     beep_when_window_active = "yes";
+    term_charset = "utf-8";
   };
   "irc/core" = { lag_check_time = "1min"; };
 };
