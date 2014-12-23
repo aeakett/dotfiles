@@ -4,6 +4,13 @@ window 1
 window name hilight
 window 2
 window name net
-connect irc.arcti.ca
-join #archiveteam
-join #archiveteam-bs
+network add -nick SadDM -user SadDM -realname SadDM EFnet
+network add -nick aeakett -user aeakett -realname aeakett myanonamouse
+server add -network EFnet irc.arcti.ca
+server add -network myanonamouse irc.myanonamouse.net
+channel add -auto #archiveteam EFnet
+channel add -auto #archiveteam-bs EFnet
+channel add -auto #archivebot EFnet
+channel add -auto #anonamouse.net myanonamouse
+connect EFnet
+connect myanonamouse
