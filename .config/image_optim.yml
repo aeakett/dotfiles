@@ -1,0 +1,4 @@
+svgo: false
+pngcrush: false
+optipng:
+  level: 7
