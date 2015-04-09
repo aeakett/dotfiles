@@ -27,6 +27,31 @@ extract () {
    fi
 }
 
+# list the contents of various archives
+archlist () {
+   if [ -f $1 ]
+   then
+      case $1 in
+         (*.zip) unzip -l $1 ;;
+         (*.epub) unzip -l $1 ;;
+         (*.jar) unzip -l $1 ;;
+         (*.cbz) unzip -l $1 ;;
+         (*.tar) tar tf $1 ;;
+         (*.tar.bz2) bzcat $1|tar tf - ;;
+         (*.tbz2) bzcat $1|tar tf - ;;
+         (*.tar.gz) zcat $1|tar tf - ;;
+         (*.tgz) zcat $1|tar tf - ;;
+         (*.rar) unrar t $1 ;;
+         (*.cbr) unrar t $1 ;;
+         (*.7z) 7z l $1 ;;
+         (*.cb7) 7z l $1 ;;
+         (*) echo "'$1' cannot be viewed via archlist()" ;;
+      esac
+   else
+      echo "'$1' is not a valid file"
+   fi
+}
+
 # Create a new directory and enter it
 function mcd() {
    mkdir -p "$@" && cd "$@"
