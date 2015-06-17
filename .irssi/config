@@ -296,5 +296,9 @@ channels = (
   { name = "#archiveteam-bs"; chatnet = "EFnet"; autojoin = "yes"; },
   { name = "#archivebot"; chatnet = "EFnet"; autojoin = "yes"; },
   { name = "#internetarchive"; chatnet = "EFnet"; autojoin = "yes"; },
-  { name = "#anonamouse.net"; chatnet = "myanonamouse"; autojoin = "yes"; }
+  {
+    name = "#anonamouse.net";
+    chatnet = "myanonamouse";
+    autojoin = "yes";
+  }
 );
