@@ -52,6 +52,12 @@ archlist () {
    fi
 }
 
+# resize images (via Smashing Magazine: http://www.smashingmagazine.com/2015/06/25/efficient-image-resizing-with-imagemagick/)
+# usage smartresize inputfile.png 300 outputdir/ (the number can be a width in pixels, or a percentage)
+smartresize() {
+   mogrify -path $3 -filter Triangle -define filter:support=2 -thumbnail $2 -unsharp 0.25x0.08+8.3+0.045 -dither None -posterize 136 -quality 82 -define jpeg:fancy-upsampling=off -define png:compression-filter=5 -define png:compression-level=9 -define png:compression-strategy=1 -define png:exclude-chunk=all -interlace none -colorspace sRGB $1
+}
+
 # Create a new directory and enter it
 function mcd() {
    mkdir -p "$@" && cd "$@"
