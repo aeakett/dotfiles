@@ -1,2 +1,0 @@
-export CVSROOT=":ext:applicat@cvs:/cvs"
-export CVS_RSH=ssh
