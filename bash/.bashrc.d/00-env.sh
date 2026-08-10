@@ -10,3 +10,13 @@ export MANPATH="$HOME/.local/share/man:$MANPATH"
 if [ -z "$SSH_AUTH_SOCK" ]; then
     eval "$(ssh-agent -s)" > /dev/null
 fi
+
+# Do host specific stuff
+case "$(hostname)" in
+   lomax)
+      source ~/.bashrc.d/`hostname`-env.sh
+      ;;
+   s-ssm-vdi151200)
+      source ~/.bashrc.d/s-ssm-vdi151200-env.sh
+      ;;
+esac
