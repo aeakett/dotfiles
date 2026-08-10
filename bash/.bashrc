@@ -19,4 +19,4 @@ fi
 eval "$(fzf --bash)"
 
 # set up zoxide
-eval "$(zoxide init bash)"
+eval "$(zoxide init --cmd cd bash)"
