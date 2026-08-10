@@ -13,8 +13,16 @@ set encoding=utf-8
 syntax enable
 
 " set solarized colour theme
-set background=dark
-colorscheme solarized
+let s:host = hostname()
+if s:host ==# 'lomax'
+    colorscheme solarized 
+    set background=dark
+elseif s:host ==# 's-ssm-vdi151200'
+    colorscheme torte
+    set background=dark
+else
+    colorscheme default
+endif
 
 " Turn on line numbering
 set number
