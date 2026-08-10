@@ -2,6 +2,7 @@
 
 export PATH=$PATH:~/bin/:~/.local/bin/
 export MANPATH="$HOME/.local/share/man:$MANPATH"
+export EDITOR=vim
 
 # Source fzf environment configuration if it exists
 [ -f "$HOME/.config/fzf/fzf.env" ] && source "$HOME/.config/fzf/fzf.env"
