@@ -4,7 +4,6 @@
 #:schema https://yazi-rs.github.io/schemas/keymap.json
 
 [mgr]
-
 keymap = [
 	{ on = "<Esc>", run = "escape",             desc = "Exit visual mode, clear selection, or cancel search" },
 	{ on = "<C-[>", run = "escape",             desc = "Exit visual mode, clear selection, or cancel search" },
@@ -93,6 +92,7 @@ keymap = [
 	{ on = [ "m", "m" ], run = "linemode mtime",       desc = "Linemode: mtime" },
 	{ on = [ "m", "o" ], run = "linemode owner",       desc = "Linemode: owner" },
 	{ on = [ "m", "n" ], run = "linemode none",        desc = "Linemode: none" },
+   { on = [ "m", "i" ], run = "linemode iso_time",    desc = "Toggle ISO time layout" },
 
 	# Copy
 	{ on = [ "c", "c" ], run = "copy path",             desc = "Copy file URL" },
