@@ -24,7 +24,7 @@ alias_if_exists btop top
 alias_if_exists bat less
 alias_if_exists eza ls
 alias_if_exists rg grep
-
+alias_if_exists fd find
 
 # eza aliases
 if command -v eza >/dev/null 2>&1; then
