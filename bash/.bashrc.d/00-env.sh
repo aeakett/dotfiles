@@ -16,9 +16,9 @@ fi
 # Do host specific stuff
 case "$(hostname)" in
    lomax)
-      source ~/.bashrc.d/`hostname`-env.sh
+      source ~/.bashrc.d/`hostname`-env.inc
       ;;
    s-ssm-vdi151200)
-      source ~/.bashrc.d/s-ssm-vdi151200-env.sh
+      source ~/.bashrc.d/s-ssm-vdi151200-env.inc
       ;;
 esac
