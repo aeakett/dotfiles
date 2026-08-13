@@ -35,7 +35,7 @@ if [ -d ~/.bashrc.d ]; then
   unset file
 fi
 
-# fzf shell integration (needs to come after $PATH is set
+# fzf shell integration (needs to come after $PATH is set)
 eval "$(fzf --bash)"
 
 # set up zoxide
