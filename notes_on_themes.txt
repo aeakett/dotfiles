@@ -1,0 +1,6 @@
+Look into these:
+=================
+lazygit
+mc
+ripgrep
+powerline stuff for vim bash and tmux
