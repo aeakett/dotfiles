@@ -3,6 +3,7 @@
 export PATH=$PATH:~/bin/:~/.local/bin/
 export MANPATH="$HOME/.local/share/man:$MANPATH"
 export EDITOR=vim
+export EZA_CONFIG_DIR="$HOME/.config/eza"
 
 # Source fzf environment configuration if it exists
 [ -f "$HOME/.config/fzf/fzf.env" ] && source "$HOME/.config/fzf/fzf.env"
