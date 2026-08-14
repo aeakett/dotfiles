@@ -33,3 +33,13 @@ if command -v eza >/dev/null 2>&1; then
 fi
 
 alias ll='ls -l'
+
+# Do host specific stuff                   
+case "$(hostname)" in                      
+   lomax)                                  
+      source ~/.bashrc.d/`hostname`-aliases.inc
+      ;;                                   
+   s-ssm-vdi151200)                        
+      source ~/.bashrc.d/s-ssm-vdi151200-aliases.inc
+      ;;                                   
+esac                                       

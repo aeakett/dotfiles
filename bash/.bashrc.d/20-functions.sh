@@ -102,3 +102,13 @@ check_dotfiles_update() {
         disown
     fi
 }
+
+# Do host specific stuff                   
+case "$(hostname)" in                      
+   lomax)                                  
+      source ~/.bashrc.d/`hostname`-functions.inc
+      ;;                                   
+   s-ssm-vdi151200)                        
+      source ~/.bashrc.d/ssm-vdi151200-functions.inc
+      ;;                                   
+esac                                       
