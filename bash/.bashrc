@@ -40,3 +40,6 @@ eval "$(fzf --bash)"
 
 # set up zoxide
 eval "$(zoxide init --cmd cd bash)"
+
+# see if there are any updates to our dotfiles
+check_dotfiles_update
