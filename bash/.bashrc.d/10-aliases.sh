@@ -4,6 +4,12 @@ alias vi=vim
 
 # List only directories
 alias lsd='ls -l | grep "^d"'
+# other ls shortcuts
+alias l='ls'
+alias ll='ls -l'
+alias la='ls -a'
+alias lla='ls -la'
+alias lal='ls -al'
 
 # Restart/reload Powerline daemon
 alias powerline-reload='powerline-daemon --replace'
@@ -30,9 +36,13 @@ alias_if_exists fd find
 if command -v eza >/dev/null 2>&1; then
    alias ls='eza -F --group-directories-first --icons=auto --color=auto --git --color-scale=all --time-style=long-iso'
    alias tree='eza --tree --icons=auto --color=auto'
+   # we can ls directories nicer with eza
+   alias lsd='ls -D'
+   alias lsdl='ll -D'
+   alias lsda='la -D'
+   alias lsdla='lla -D'
+   alias lsdal='lal -D'
 fi
-
-alias ll='ls -l'
 
 # Do host specific stuff                   
 case "$(hostname)" in                      
