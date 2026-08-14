@@ -10,7 +10,7 @@ case "$(hostname)" in
    lomax)                                           
       source ~/.bashrc.d/`hostname`-prompt.inc     
       ;;                                            
-   s-ssm-vdi151200)                                 
-      source ~/.bashrc.d/s-ssm-vdi151200-prompt.inc
+   examplehost)                                 
+      source ~/.bashrc.d/examplehost-prompt.inc
       ;;                                            
 esac                                                

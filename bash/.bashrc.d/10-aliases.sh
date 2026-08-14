@@ -39,7 +39,7 @@ case "$(hostname)" in
    lomax)                                  
       source ~/.bashrc.d/`hostname`-aliases.inc
       ;;                                   
-   s-ssm-vdi151200)                        
-      source ~/.bashrc.d/s-ssm-vdi151200-aliases.inc
+   examplehost)                        
+      source ~/.bashrc.d/examplehost-aliases.inc
       ;;                                   
 esac                                       
