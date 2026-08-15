@@ -1,5 +1,8 @@
 # Path, exports, and environment variables
 
+# add bash completion
+source /usr/share/bash-completion/bash_completion
+
 export PATH=$PATH:~/bin/:~/.local/bin/
 export MANPATH="$HOME/.local/share/man:$MANPATH"
 export EDITOR=vim
