@@ -3,6 +3,7 @@
 format = """
 [](color_orange)\
 $username\
+[@](bg:color_orange fg:color_fg0)\
 [](bg:color_yellow fg:color_orange)\
 $directory\
 [](fg:color_yellow bg:color_aqua)\
@@ -42,8 +43,9 @@ style = "fg:color_fg0 bg:color_yellow"
 read_only_style = "fg:color_fg0 bg:color_yellow"
 read_only = ""
 format = "[ $path ]($style)[$read_only ]($read_only_style)"
-truncation_length = 3
+truncation_length = 6
 truncation_symbol = "…/"
+truncate_to_repo = false
 
 [directory.substitutions]
 "Documents" = "󰈙 "
