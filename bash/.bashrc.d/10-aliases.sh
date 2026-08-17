@@ -32,16 +32,21 @@ alias_if_exists eza ls
 alias_if_exists rg grep
 alias_if_exists fd find
 
+# A bunch of 'ls' shortcuts
+alias   l='ls --color=auto'
+alias  la='ls --color=auto -a'
+alias  ll='ls --color=auto -l'
+alias lla='ls --color=auto -la'
+alias lal='ls --color=auto -al'
+alias lsd='ls -l|grep "^d"'
+
+
 # eza aliases
 if command -v eza >/dev/null 2>&1; then
    alias ls='eza -F --group-directories-first --icons=auto --color=auto --git --color-scale=all --time-style=long-iso'
    alias tree='eza --tree --icons=auto --color=auto'
-   # we can ls directories nicer with eza
    alias lsd='ls -D'
-   alias lsdl='ll -D'
-   alias lsda='la -D'
-   alias lsdla='lla -D'
-   alias lsdal='lal -D'
+   alias lsda='ls -Da'
 fi
 
 # Do host specific stuff                   
