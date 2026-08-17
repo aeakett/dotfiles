@@ -1,8 +1,3 @@
-# Start Starship
-if command -v starship &> /dev/null; then
-    eval "$(starship init bash)"
-fi
-
 # Load config pieces
 if [ -d ~/.bashrc.d ]; then
   for file in ~/.bashrc.d/*.sh; do
@@ -19,3 +14,8 @@ eval "$(zoxide init --cmd cd bash)"
 
 # see if there are any updates to our dotfiles
 check_dotfiles_update
+
+# Start Starship
+if command -v starship &> /dev/null; then
+    eval "$(starship init bash)"
+fi
