@@ -86,7 +86,7 @@ check_dotfiles_update() {
     [[ -f "$cache_file.last" ]] && last_check=$(cat "$cache_file.last")
     local now=$(date +%s)
 
-    if (( now - last_check > 86400 )); then
+    if (( now - last_check > 3600 )); then
         echo "$now" > "$cache_file.last"
         (
             local local_hash remote_hash
