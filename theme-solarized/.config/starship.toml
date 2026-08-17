@@ -1,0 +1,79 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+[](color_bg3)\
+$username\
+[@](bg:color_bg3 fg:color_fg0)\
+$hostname(bg:color_bg3 fg:color_fg0)\
+[](bg:color_blue fg:color_bg3)\
+$directory\
+[](fg:color_blue bg:color_yellow)\
+$git_branch\
+$git_status\
+[](fg:color_yellow bg:color_blue)\
+
+[](fg:color_blue bg:color_bg3)\
+
+[](fg:color_bg3 bg:color_bg1)\
+
+[ ](fg:color_bg1)\
+$character"""
+
+palette = 'terrible_solarized_dark'
+
+[palettes.terrible_solarized_dark]
+color_fg0 = '#fbf1c7'
+color_bg1 = '#3c3836'
+color_bg3 = '#665c54'
+color_blue = '#458588'
+color_aqua = '#689d6a'
+color_green = '#98971a'
+color_orange = '#d65d0e'
+color_purple = '#b16286'
+color_red = '#cc241d'
+color_yellow = '#d79921'
+
+[username]
+show_always = true
+style_user = "bg:color_bg3 fg:color_fg0"
+style_root = "bg:color_bg3 fg:color_fg0"
+format = '[$user]($style)'
+
+[hostname]
+style = "bg:color_bg3 fg:color_fg0"
+format = '[$hostname]($style)'
+aliases = { "badname1"="goodname1", "s-ssm-vdi151200" = "ssm-webdev", "badname2"="goodname2" }
+
+[directory]
+style = "fg:color_fg0 bg:color_blue"
+read_only_style = "fg:color_fg0 bg:color_blue"
+read_only = ""
+format = "[ $path ]($style)[$read_only ]($read_only_style)"
+truncation_length = 6
+truncation_symbol = "…/"
+truncate_to_repo = false
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = "󰝚 "
+"Pictures" = " "
+"Developer" = "󰲋 "
+
+[git_branch]
+symbol = ""
+style = "bg:color_yellow"
+format = '[[ $symbol $branch ](fg:color_fg0 bg:color_yellow)]($style)'
+
+[git_status]
+style = "bg:color_yellow"
+format = '[[($all_status$ahead_behind )](fg:color_fg0 bg:color_yellow)]($style)'
+
+[character]
+disabled = false
+success_symbol = '[](bold fg:color_green)'
+error_symbol = '[](bold fg:color_red)'
+vimcmd_symbol = '[](bold fg:color_green)'
+vimcmd_replace_one_symbol = '[](bold fg:color_purple)'
+vimcmd_replace_symbol = '[](bold fg:color_purple)'
+vimcmd_visual_symbol = '[](bold fg:color_yellow)'
