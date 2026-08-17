@@ -4,6 +4,7 @@ format = """
 [](color_orange)\
 $username\
 [@](bg:color_orange fg:color_fg0)\
+$hostname\
 [](bg:color_yellow fg:color_orange)\
 $directory\
 [](fg:color_yellow bg:color_aqua)\
@@ -36,13 +37,18 @@ color_yellow = '#d79921'
 show_always = true
 style_user = "bg:color_orange fg:color_fg0"
 style_root = "bg:color_orange fg:color_fg0"
-format = '[$user ]($style)'
+format = '[$user]($style)'
+
+[hostname]
+style = "bg:color_orange fg:color_fg0"
+format = '[$hostname ]($style)'
+aliases = { "W-SSM-A096925"="odemin", "s-ssm-vdi151200" = "ssm-webdev", "badname2"="goodname2" }
 
 [directory]
 style = "fg:color_fg0 bg:color_yellow"
 read_only_style = "fg:color_fg0 bg:color_yellow"
 read_only = ""
-format = "[ $path ]($style)[$read_only ]($read_only_style)"
+format = "[ $path]($style)[ $read_only ]($read_only_style)"
 truncation_length = 6
 truncation_symbol = "…/"
 truncate_to_repo = false
