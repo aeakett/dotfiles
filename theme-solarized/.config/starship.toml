@@ -42,7 +42,11 @@ format = '[$user]($style)'
 [hostname]
 style = "bg:color_bg3 fg:color_fg0"
 format = '[$hostname ]($style)'
-aliases = { "W-SSM-A096925"="odemin", "s-ssm-vdi151200" = "ssm-webdev", "badname2"="goodname2" }
+aliases = { "s-bor-vpi151000" = "ssm-webprod",
+            "s-ssm-vdi151200" = "ssm-webdev",
+            "W-SSM-A096925" = "odemin",
+            "s-bor-vpa151250" = "ledum",
+            "s-bor-vpq151251" = "postgres"}
 
 [directory]
 style = "fg:color_fg0 bg:color_blue"
