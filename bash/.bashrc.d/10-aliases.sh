@@ -2,6 +2,15 @@
 
 alias vi=vim
 
+# List only directories
+alias lsd='ls -l | grep "^d"'
+# other ls shortcuts
+alias l='ls'
+alias ll='ls -l'
+alias la='ls -a'
+alias lla='ls -la'
+alias lal='ls -al'
+
 # Restart/reload Powerline daemon
 alias powerline-reload='powerline-daemon --replace'
 
