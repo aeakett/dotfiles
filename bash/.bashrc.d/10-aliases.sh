@@ -51,7 +51,9 @@ fi
 # fzf aliases
 if command -v fzf >/dev/null 2>&1; then
    alias fvi='vim $(fzf)'
-	alias fless='less $(fzf)'
+   alias fless='less $(fzf)'
+   alias vif='vim $(fzf)'
+   alias lessf='less $(fzf)'
 fi
 
 # Do host specific stuff
