@@ -1,7 +1,13 @@
-" Set up Powerline
-python3 from powerline.vim import setup as powerline_setup
-python3 powerline_setup()
-python3 del powerline_setup
+"" Set up Powerline
+"python3 from powerline.vim import setup as powerline_setup
+"python3 powerline_setup()
+"python3 del powerline_setup
+
+" Disable vi compatibility, if for some reason it's on.
+set nocompatible
+
+" Start searching before pressing enter.
+set incsearch
 
 " Always show the status line
 set laststatus=2
@@ -12,17 +18,17 @@ set encoding=utf-8
 " Enable syntax highlighting
 syntax enable
 
-" set solarized colour theme
-let s:host = hostname()
-if s:host ==# 'lomax'
-    colorscheme solarized 
-    set background=dark
-elseif s:host ==# 's-ssm-vdi151200'
-    colorscheme torte
-    set background=dark
-else
-    colorscheme default
-endif
+"" set solarized colour theme
+"let s:host = hostname()
+"if s:host ==# 'lomax'
+"    colorscheme solarized 
+"    set background=dark
+"elseif s:host ==# 's-ssm-vdi151200'
+"    colorscheme torte
+"    set background=dark
+"else
+"    colorscheme default
+"endif
 
 " Turn on line numbering
 set number
@@ -42,3 +48,30 @@ set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_,space:·
 "	set relativenumber
 "	au BufReadPost * set relativenumber
 "endif
+
+" Install vim-plug if needed
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+call plug#begin()
+" List your plugins here
+"Plug 'tpope/vim-sensible'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+"Plug 'morhetz/gruvbox'
+Plug 'altercation/vim-colors-solarized'
+call plug#end()
+" https://github.com/junegunn/vim-plug
+" :PlugInstall to install the plugins
+" :PlugUpdate to install or update the plugins
+" :PlugDiff to review the changes from the last update
+" :PlugClean to remove plugins no longer in the list
+
+" tell airline to use powerline symbols
+let g:airline_powerline_fonts = 1
