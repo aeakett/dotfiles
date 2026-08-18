@@ -1,0 +1,34 @@
+
+Look into theming for:
+ - lazygit
+ - mc
+ - ripgrep
+tmux
+ - weather segment
+ - zoom indicator
+ - leader pressed indicator
+vim
+ - airline themes
+fix colours on solarized starship theme
+
+list of software... needs and nices
+  needs:
+   - git
+   - stow
+   - bash
+   - a good vim
+   - a nerd font (current fav: FiraCode Nerd Font Propo)
+  nices:
+   - zoxide
+   - fzf *
+   - eza
+   - yazi
+   - duf
+   - btop
+   - ncdu
+   - bat *
+   - ripgrep
+   - lazygit
+   - mc
+   - tmux
+
