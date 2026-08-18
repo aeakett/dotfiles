@@ -7,7 +7,9 @@ if [ -d ~/.bashrc.d ]; then
 fi
 
 # fzf shell integration (needs to come after $PATH is set)
-eval "$(fzf --bash)"
+if command -v fzf &> /dev/null; then
+   eval "$(fzf --bash)"
+fi
 
 # see if there are any updates to our dotfiles
 check_dotfiles_update
@@ -18,4 +20,6 @@ if command -v starship &> /dev/null; then
 fi
 
 # set up zoxide
-eval "$(zoxide init --cmd cd bash)"
+if command -v zoxide &> /dev/null; then
+   eval "$(zoxide init --cmd cd bash)"
+fi
