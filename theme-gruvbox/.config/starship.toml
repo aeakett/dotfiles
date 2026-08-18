@@ -47,6 +47,7 @@ aliases = { "s-bor-vpi151000" = "ssm-webprod",
             "W-SSM-A096925" = "odemin",
             "s-bor-vpa151250" = "ledum",
             "s-bor-vpq151251" = "postgres"}
+ssh_only = false
 
 [directory]
 style = "fg:color_fg0 bg:color_yellow"
