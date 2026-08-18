@@ -66,6 +66,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 "Plug 'morhetz/gruvbox'
 Plug 'altercation/vim-colors-solarized'
+Plug 'ryanoasis/vim-devicons'
 call plug#end()
 " https://github.com/junegunn/vim-plug
 " :PlugInstall to install the plugins
