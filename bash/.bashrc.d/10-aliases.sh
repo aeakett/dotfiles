@@ -40,7 +40,6 @@ alias lla='ls --color=auto -la'
 alias lal='ls --color=auto -al'
 alias lsd='ls -l|grep "^d"'
 
-
 # eza aliases
 if command -v eza >/dev/null 2>&1; then
    alias ls='eza -F --group-directories-first --icons=auto --color=auto --git --color-scale=all --time-style=long-iso'
@@ -49,12 +48,18 @@ if command -v eza >/dev/null 2>&1; then
    alias lsda='ls -Da'
 fi
 
-# Do host specific stuff                   
-case "$(hostname)" in                      
-   lomax)                                  
+# fzf aliases
+if command -v fzf >/dev/null 2>&1; then
+   alias fvi='vim $(fzf)'
+	alias fless='less $(fzf)'
+fi
+
+# Do host specific stuff
+case "$(hostname)" in
+   lomax)
       source ~/.bashrc.d/`hostname`-aliases.inc
-      ;;                                   
-   examplehost)                        
+      ;;
+   examplehost)
       source ~/.bashrc.d/examplehost-aliases.inc
-      ;;                                   
-esac                                       
+      ;;
+esac
