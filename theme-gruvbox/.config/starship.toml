@@ -2,6 +2,7 @@
 
 format = """
 [](color_orange)\
+$character\
 $username\
 [@](bg:color_orange fg:color_fg0)\
 $hostname\
@@ -16,7 +17,8 @@ $git_status\
 
 [](fg:color_bg3 bg:color_bg1)\
 
-$character"""
+[ ](fg:color_bg1)\
+"""
 
 palette = 'gruvbox_dark'
 
@@ -75,10 +77,9 @@ format = '[[($all_status$ahead_behind )](fg:color_fg0 bg:color_aqua)]($style)'
 
 [character]
 disabled = false
-#success_symbol = '[](bold fg:color_green)'
-success_symbol = '[ ](fg:color_bg1)'
-#error_symbol = '[](bold fg:color_red)'
-error_symbol = '[ ](fg:color_red)'
+format = "$symbol"
+success_symbol = '[](bold bg:color_orange fg:color_bg1)'
+error_symbol = '[ ](bold bg:color_orange fg:color_bg1)'
 vimcmd_symbol = '[](bold fg:color_green)'
 vimcmd_replace_one_symbol = '[](bold fg:color_purple)'
 vimcmd_replace_symbol = '[](bold fg:color_purple)'
