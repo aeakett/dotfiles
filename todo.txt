@@ -17,6 +17,7 @@ list of software... needs and nices
    - bash
    - a good vim
    - a nerd font (current fav: FiraCode Nerd Font Propo)
+   - need tpm set up for tmux (git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm)
   nices:
    - zoxide
    - fzf *
