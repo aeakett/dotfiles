@@ -9,7 +9,6 @@ tmux
  - leader pressed indicator
 vim
  - airline themes
-fix colours on solarized starship theme
 
 list of software... needs and nices
   needs:

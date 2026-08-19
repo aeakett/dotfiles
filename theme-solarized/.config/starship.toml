@@ -1,47 +1,49 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 format = """
-[](color_bg3)\
+[](color_base01)\
 $character\
 $username\
-[@](bg:color_bg3 fg:color_fg0)\
+[@](bg:color_base01 fg:color_base2)\
 $hostname\
-[](bg:color_blue fg:color_bg3)\
+[](bg:color_blue fg:color_base01)\
 $directory\
 [](fg:color_blue bg:color_yellow)\
 $git_branch\
 $git_status\
-[](fg:color_yellow bg:color_blue)\
+[](fg:color_yellow bg:color_base01)\
 
-[](fg:color_blue bg:color_bg3)\
-
-[](fg:color_bg3 bg:color_bg1)\
-
-[ ](fg:color_bg1)\
+[ ](fg:color_base01)\
 """
 
-palette = 'terrible_solarized_dark'
+palette = 'terrible_solarized'
 
-[palettes.terrible_solarized_dark]
-color_fg0 = '#fbf1c7'
-color_bg1 = '#3c3836'
-color_bg3 = '#665c54'
-color_blue = '#458588'
-color_aqua = '#689d6a'
-color_green = '#98971a'
-color_orange = '#d65d0e'
-color_purple = '#b16286'
-color_red = '#cc241d'
-color_yellow = '#d79921'
+[palettes.terrible_solarized]
+color_base03 = '#002b36'
+color_base02 = '#073642'
+color_base01 = '#586e75'
+color_base00 = '#657b83'
+color_base0 = '#839496'
+color_base1 = '#93a1a1'
+color_base2 = '#eee8d5'
+color_base3 = '#fdf6e3'
+color_yellow = '#b58900'
+color_orange = '#cb4b16'
+color_red = '#dc322f'
+color_magenta = '#d33682'
+color_violet = '#6c71c4'
+color_blue = '#268bd2'
+color_cyan = '#2aa198'
+color_green = '#859900'
 
 [username]
 show_always = true
-style_user = "bg:color_bg3 fg:color_fg0"
-style_root = "bg:color_bg3 fg:color_fg0"
+style_user = "bg:color_base01 fg:color_base2"
+style_root = "bg:color_base01 fg:color_base2"
 format = '[$user]($style)'
 
 [hostname]
-style = "bg:color_bg3 fg:color_fg0"
+style = "bg:color_base01 fg:color_base2"
 format = '[$hostname ]($style)'
 aliases = { "s-bor-vpi151000" = "ssm-webprod",
             "s-ssm-vdi151200" = "ssm-webdev",
@@ -51,8 +53,8 @@ aliases = { "s-bor-vpi151000" = "ssm-webprod",
 ssh_only = false
 
 [directory]
-style = "fg:color_fg0 bg:color_blue"
-read_only_style = "fg:color_fg0 bg:color_blue"
+style = "fg:color_base2 bg:color_blue"
+read_only_style = "fg:color_base2 bg:color_blue"
 read_only = ""
 format = "[ $path]($style)[ $read_only ]($read_only_style)"
 truncation_length = 6
@@ -69,17 +71,17 @@ truncate_to_repo = false
 [git_branch]
 symbol = ""
 style = "bg:color_yellow"
-format = '[[ $symbol $branch ](fg:color_fg0 bg:color_yellow)]($style)'
+format = '[[ $symbol $branch ](fg:color_base2 bg:color_yellow)]($style)'
 
 [git_status]
 style = "bg:color_yellow"
-format = '[[($all_status$ahead_behind )](fg:color_fg0 bg:color_yellow)]($style)'
+format = '[[($all_status$ahead_behind )](fg:color_base2 bg:color_yellow)]($style)'
 
 [character]
 disabled = false
 format = "$symbol"
-success_symbol = '[](bold bg:color_orange fg:color_bg1)'
-error_symbol = '[ ](bold bg:color_bg3 fg:color_yellow)'
+success_symbol = '[](bold bg:color_base01 fg:color_yellow)'
+error_symbol = '[ ](bold bg:color_base01 fg:color_yellow)'
 vimcmd_symbol = '[](bold fg:color_green)'
 vimcmd_replace_one_symbol = '[](bold fg:color_purple)'
 vimcmd_replace_symbol = '[](bold fg:color_purple)'
