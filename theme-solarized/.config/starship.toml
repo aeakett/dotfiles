@@ -2,6 +2,7 @@
 
 format = """
 [](color_bg3)\
+$character\
 $username\
 [@](bg:color_bg3 fg:color_fg0)\
 $hostname\
@@ -17,7 +18,7 @@ $git_status\
 [](fg:color_bg3 bg:color_bg1)\
 
 [ ](fg:color_bg1)\
-$character"""
+"""
 
 palette = 'terrible_solarized_dark'
 
@@ -47,6 +48,7 @@ aliases = { "s-bor-vpi151000" = "ssm-webprod",
             "W-SSM-A096925" = "odemin",
             "s-bor-vpa151250" = "ledum",
             "s-bor-vpq151251" = "postgres"}
+ssh_only = false
 
 [directory]
 style = "fg:color_fg0 bg:color_blue"
@@ -75,8 +77,9 @@ format = '[[($all_status$ahead_behind )](fg:color_fg0 bg:color_yellow)]($style)'
 
 [character]
 disabled = false
-success_symbol = '[](bold fg:color_green)'
-error_symbol = '[](bold fg:color_red)'
+format = "$symbol"
+success_symbol = '[](bold bg:color_orange fg:color_bg1)'
+error_symbol = '[ ](bold bg:color_bg3 fg:color_yellow)'
 vimcmd_symbol = '[](bold fg:color_green)'
 vimcmd_replace_one_symbol = '[](bold fg:color_purple)'
 vimcmd_replace_symbol = '[](bold fg:color_purple)'
