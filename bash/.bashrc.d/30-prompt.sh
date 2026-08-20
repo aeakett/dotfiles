@@ -4,6 +4,7 @@
 # load custom .dir_colors
 [[ -f "~/.dir_colors" ]] && eval "$(dircolors ~/.dir_colors)"
 
+[[ -f "$HOME/.bashrc.d/theme-lscolors.inc" ]] && source "$HOME/.bashrc.d/theme-lscolors.inc"
 [[ -f "$HOME/.bashrc.d/theme-eza.inc" ]] && source "$HOME/.bashrc.d/theme-eza.inc"
 [[ -f "$HOME/.bashrc.d/theme-fzf.inc" ]] && source "$HOME/.bashrc.d/theme-fzf.inc"
 [[ -f "$HOME/.bashrc.d/theme-bat.inc" ]] && source "$HOME/.bashrc.d/theme-bat.inc"
