@@ -31,4 +31,5 @@ list of software... needs and nices
    - lazygit
    - mc
    - tmux
+   - starship
 
