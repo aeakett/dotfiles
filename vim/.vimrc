@@ -1,8 +1,3 @@
-"" Set up Powerline
-"python3 from powerline.vim import setup as powerline_setup
-"python3 powerline_setup()
-"python3 del powerline_setup
-
 " Disable vi compatibility, if for some reason it's on.
 set nocompatible
 
@@ -17,18 +12,6 @@ set encoding=utf-8
 
 " Enable syntax highlighting
 syntax enable
-
-"" set solarized colour theme
-"let s:host = hostname()
-"if s:host ==# 'lomax'
-"    colorscheme solarized 
-"    set background=dark
-"elseif s:host ==# 's-ssm-vdi151200'
-"    colorscheme torte
-"    set background=dark
-"else
-"    colorscheme default
-"endif
 
 " Turn on line numbering
 set number
@@ -58,13 +41,10 @@ endif
 
 call plug#begin()
 " List your plugins here
-"Plug 'tpope/vim-sensible'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-"Plug 'morhetz/gruvbox'
 Plug 'altercation/vim-colors-solarized'
 Plug 'ryanoasis/vim-devicons'
 call plug#end()
