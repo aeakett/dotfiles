@@ -1,6 +1,7 @@
 # Command aliases
 
 alias vi=vim
+alias lazygit='lazygit --use-config-file="$HOME/.config/lazygit/config.yml,$HOME/.config/lazygit/theme.yml"'
 
 alias rbash='source ~/.bashrc'
 
