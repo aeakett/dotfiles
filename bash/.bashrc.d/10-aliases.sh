@@ -11,9 +11,6 @@ alias la='ls -a'
 alias lla='ls -la'
 alias lal='ls -al'
 
-# Restart/reload Powerline daemon
-alias powerline-reload='powerline-daemon --replace'
-
 alias_if_exists() {
     local replacement=$1
     local original=$2
