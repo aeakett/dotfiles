@@ -2,6 +2,8 @@
 
 alias vi=vim
 
+alias rbash='source ~/.bashrc'
+
 # List only directories
 alias lsd='ls -l | grep "^d"'
 # other ls shortcuts
