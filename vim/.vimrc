@@ -1,3 +1,8 @@
+" Enable true color support
+if has('termguicolors')
+  "set termguicolors
+endif
+
 " Disable vi compatibility, if for some reason it's on.
 set nocompatible
 
@@ -5,7 +10,7 @@ set nocompatible
 set incsearch
 
 " Always show the status line
-set laststatus=2
+"set laststatus=2
 
 " Ensure UTF-8 encoding is enabled to render Powerline symbols correctly
 set encoding=utf-8
@@ -56,3 +61,4 @@ call plug#end()
 
 " tell airline to use powerline symbols
 let g:airline_powerline_fonts = 1
+
