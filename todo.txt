@@ -33,3 +33,4 @@ list of software... needs and nices
    - tmux
    - starship
 
+For mc and btop, you need to select the appropriate theme once in the application
