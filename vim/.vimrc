@@ -29,6 +29,9 @@ set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_,space:·
 "	au BufReadPost * set relativenumber
 "endif
 
+" don't show mode on command line since we're using airline
+set noshowmode
+
 " Install vim-plug if needed
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
