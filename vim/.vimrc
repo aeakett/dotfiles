@@ -1,16 +1,8 @@
-" Enable true color support
-if has('termguicolors')
-  "set termguicolors
-endif
-
 " Disable vi compatibility, if for some reason it's on.
 set nocompatible
 
 " Start searching before pressing enter.
 set incsearch
-
-" Always show the status line
-"set laststatus=2
 
 " Ensure UTF-8 encoding is enabled to render Powerline symbols correctly
 set encoding=utf-8
@@ -50,7 +42,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'altercation/vim-colors-solarized'
+"Plug 'altercation/vim-colors-solarized'
 Plug 'ryanoasis/vim-devicons'
 call plug#end()
 " https://github.com/junegunn/vim-plug
