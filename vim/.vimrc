@@ -40,6 +40,7 @@ call plug#begin()
 " List your plugins here
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'catppuccin/vim', { 'as': 'catppuccin', 'branch': 'main' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 "Plug 'altercation/vim-colors-solarized'
@@ -54,3 +55,6 @@ call plug#end()
 " tell airline to use powerline symbols
 let g:airline_powerline_fonts = 1
 
+if filereadable(expand('~/.vim/config/theme.vim'))
+   source ~/.vim/config/theme.vim
+endif
