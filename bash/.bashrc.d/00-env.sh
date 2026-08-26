@@ -6,6 +6,15 @@ source /usr/share/bash-completion/bash_completion
 export PATH=$PATH:~/bin/:~/.local/bin/
 export MANPATH="$HOME/.local/share/man:$MANPATH"
 export EDITOR=vim
+export VISUAL=vim
+# Set man pager
+if command -v bat > /dev/null 2>&1; then
+   export MANPAGER="bat -l man -p"
+elif command -v batcat > /dev/null 2>&1; then
+   export MANPAGER="batcat -l man -p"
+fi
+
+
 export EZA_CONFIG_DIR="$HOME/.config/eza"
 
 # Source fzf environment configuration if it exists
