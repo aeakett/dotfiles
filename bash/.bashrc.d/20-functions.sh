@@ -65,44 +65,6 @@ smartresize() {
    mogrify -path $3 -filter Triangle -define filter:support=2 -thumbnail $2 -unsharp 0.25x0.08+8.3+0.045 -dither None -posterize 136 -quality 82 -define jpeg:fancy-upsampling=off -define png:compression-filter=5 -define png:compression-level=9 -define png:compression-strategy=1 -define png:exclude-chunk=all -interlace none -colorspace sRGB $1
 }
 
-check_dotfiles_update() {
-    local dotfiles_dir="$HOME/dotfiles"
-    local http_url="https://github.com/aeakett/dotfiles.git"
-    local cache_file="$HOME/.cache/dotfiles_update_check"
-
-    # Only run in interactive shells and ensure repo exists
-    [[ $- == *i* ]] && [[ -d "$dotfiles_dir/.git" ]] || return 0
-
-    # Ensure cache directory exists
-    mkdir -p "$(dirname "$cache_file")"
-
-    # Print notification from a previous background check if updates were found
-    if [[ -f "$cache_file" ]] && [[ $(cat "$cache_file") == "UPDATE_AVAILABLE" ]]; then
-        echo -e "\033[0;33m[dotfiles]\033[0m Updates available! Run 'cd $dotfiles_dir && git pull' to sync."
-    fi
-
-    # Run network check asynchronously in the background once per day (86400 seconds)
-    local last_check=0
-    [[ -f "$cache_file.last" ]] && last_check=$(cat "$cache_file.last")
-    local now=$(date +%s)
-
-    if (( now - last_check > 3600 )); then
-        echo "$now" > "$cache_file.last"
-        (
-            local local_hash remote_hash
-            local_hash=$(git -C "$dotfiles_dir" rev-parse HEAD 2>/dev/null)
-            remote_hash=$(git ls-remote "$http_url" HEAD 2>/dev/null | awk '{print $1}')
-
-            if [[ -n "$remote_hash" && "$local_hash" != "$remote_hash" ]]; then
-                echo "UPDATE_AVAILABLE" > "$cache_file"
-            else
-                echo "UP_TO_DATE" > "$cache_file"
-            fi
-        ) &>/dev/null &
-        disown
-    fi
-}
-
 # Do host specific stuff                   
 case "$(hostname)" in                      
    lomax)                                  

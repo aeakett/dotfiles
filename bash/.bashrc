@@ -11,9 +11,6 @@ if command -v fzf &> /dev/null; then
    eval "$(fzf --bash)"
 fi
 
-# see if there are any updates to our dotfiles
-check_dotfiles_update
-
 # Start Starship
 if command -v starship &> /dev/null; then
     eval "$(starship init bash)"
