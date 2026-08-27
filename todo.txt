@@ -1,35 +1,8 @@
 
 Look into theming for:
- - lazygit
- - mc
  - ripgrep
 vim
  - airline themes
-
-list of software... needs and nices
-  needs:
-   - git
-   - stow
-   - bash
-   - a good vim
-   - a nerd font (current fav: FiraCode Nerd Font Propo)
-   - need tpm set up for tmux (git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm)
-  nices:
-   - zoxide
-   - fzf *
-   - eza
-   - yazi
-   - duf
-   - btop
-   - ncdu
-   - bat *
-   - ripgrep
-   - lazygit
-   - mc
-   - tmux
-   - starship
-
-For mc and btop, you need to select the appropriate theme once in the application
 
 - tmux pane index start at 1 instead of 0
 - look at fixing stray ansi codes when using bat as MANPAGER
@@ -41,11 +14,15 @@ For mc and btop, you need to select the appropriate theme once in the applicatio
 - document all of the pieces of a theme
 - add conditional checks where needed
 - look at delta to see of it's something we'd use
+- look at glow to see if it's something we'd use
 - remove blank line from starship prompt
 - add light themes (solarized and gruvbox are a godd place to start)
 - look for other themes with good coverage
 - tweak bash history settings
 - is there anything we can tweak with shell completion?
+- tabs getting used for indentation in vim
+- I think there's a way to show indentation level in vim?
+- there's something about lazygit needing a config file touched after first setup... figure that out and document it
 
 
 
