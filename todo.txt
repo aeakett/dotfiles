@@ -4,7 +4,6 @@ Look into theming for:
 vim
  - airline themes
 
-- tmux pane index start at 1 instead of 0
 - look at fixing stray ansi codes when using bat as MANPAGER
 - eza icon update (php comes to mind)
 - vim-devicons update (.pl comes to mind)
@@ -23,7 +22,7 @@ vim
 - tabs getting used for indentation in vim
 - I think there's a way to show indentation level in vim?
 - there's something about lazygit needing a config file touched after first setup... figure that out and document it
-
+- add jq
 
 
 
