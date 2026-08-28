@@ -26,11 +26,6 @@ if [ -z "$SSH_AUTH_SOCK" ]; then
 fi
 
 # Do host specific stuff
-case "$(hostname)" in
-   lomax)
-      source ~/.bashrc.d/`hostname`-env.inc
-      ;;
-   s-ssm-vdi151200)
-      source ~/.bashrc.d/s-ssm-vdi151200-env.inc
-      ;;
-esac
+if [ -f "$HOME/.bashrc.d/host-env.inc" ]; then
+   source "$HOME/.bashrc.d/host-env.inc"
+fi

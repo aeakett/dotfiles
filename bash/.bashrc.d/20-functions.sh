@@ -66,11 +66,7 @@ smartresize() {
 }
 
 # Do host specific stuff                   
-case "$(hostname)" in                      
-   lomax)                                  
-      source ~/.bashrc.d/`hostname`-functions.inc
-      ;;                                   
-   examplehost)                        
-      source ~/.bashrc.d/examplehost-functions.inc
-      ;;                                   
-esac                                       
+# Do host specific stuff
+if [ -f "$HOME/.bashrc.d/host-functions.inc" ]; then
+   source "$HOME/.bashrc.d/host-functions.inc"
+fi

@@ -57,11 +57,7 @@ if command -v fzf >/dev/null 2>&1; then
 fi
 
 # Do host specific stuff
-case "$(hostname)" in
-   lomax)
-      source ~/.bashrc.d/`hostname`-aliases.inc
-      ;;
-   examplehost)
-      source ~/.bashrc.d/examplehost-aliases.inc
-      ;;
-esac
+# Do host specific stuff
+if [ -f "$HOME/.bashrc.d/host-aliases.inc" ]; then
+   source "$HOME/.bashrc.d/host-aliases.inc"
+fi

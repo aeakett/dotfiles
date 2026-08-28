@@ -10,11 +10,7 @@
 [[ -f "$HOME/.bashrc.d/theme-bat.inc" ]] && source "$HOME/.bashrc.d/theme-bat.inc"
 
 # Do host specific stuff                            
-case "$(hostname)" in                               
-   lomax)                                           
-      source ~/.bashrc.d/`hostname`-prompt.inc     
-      ;;                                            
-   examplehost)                                 
-      source ~/.bashrc.d/examplehost-prompt.inc
-      ;;                                            
-esac                                                
+# Do host specific stuff
+if [ -f "$HOME/.bashrc.d/host-prompt.inc" ]; then
+   source "$HOME/.bashrc.d/host-prompt.inc"
+fi
