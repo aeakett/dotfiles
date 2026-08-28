@@ -1,7 +1,9 @@
 # Path, exports, and environment variables
 
 # add bash completion
-source /usr/share/bash-completion/bash_completion
+if [ -f "/usr/share/bash-completion/bash_completion" ]; then
+   source /usr/share/bash-completion/bash_completion
+fi
 
 export PATH=$PATH:~/bin/:~/.local/bin/
 export MANPATH="$HOME/.local/share/man:$MANPATH"
