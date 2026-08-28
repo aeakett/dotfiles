@@ -9,7 +9,6 @@
 [[ -f "$HOME/.bashrc.d/theme-fzf.inc" ]] && source "$HOME/.bashrc.d/theme-fzf.inc"
 [[ -f "$HOME/.bashrc.d/theme-bat.inc" ]] && source "$HOME/.bashrc.d/theme-bat.inc"
 
-# Do host specific stuff                            
 # Do host specific stuff
 if [ -f "$HOME/.bashrc.d/host-prompt.inc" ]; then
    source "$HOME/.bashrc.d/host-prompt.inc"

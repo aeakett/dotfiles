@@ -66,7 +66,6 @@ smartresize() {
 }
 
 # Do host specific stuff                   
-# Do host specific stuff
 if [ -f "$HOME/.bashrc.d/host-functions.inc" ]; then
    source "$HOME/.bashrc.d/host-functions.inc"
 fi
