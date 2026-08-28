@@ -5,15 +5,6 @@ alias lazygit='lazygit --use-config-file="$HOME/.config/lazygit/config.yml,$HOME
 
 alias rbash='source ~/.bashrc'
 
-# List only directories
-alias lsd='ls -l | grep "^d"'
-# other ls shortcuts
-alias l='ls'
-alias ll='ls -l'
-alias la='ls -a'
-alias lla='ls -la'
-alias lal='ls -al'
-
 alias_if_exists() {
     local replacement=$1
     local original=$2
@@ -43,7 +34,8 @@ alias lsd='ls -l|grep "^d"'
 # eza aliases
 if command -v eza >/dev/null 2>&1; then
    alias ls='eza -F --group-directories-first --icons=auto --color=auto --git --color-scale=all --time-style=long-iso'
-   alias tree='eza --tree --icons=auto --color=auto'
+	alias_if_exists 'eza --tree --icons=auto --color=auto' tree
+   #alias tree='eza --tree --icons=auto --color=auto'
    alias lsd='ls -D'
    alias lsda='ls -Da'
 fi
