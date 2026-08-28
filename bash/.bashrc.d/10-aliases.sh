@@ -24,12 +24,13 @@ alias_if_exists rg grep
 alias_if_exists fd find
 
 # A bunch of 'ls' shortcuts
-alias   l='ls --color=auto'
-alias  la='ls --color=auto -a'
-alias  ll='ls --color=auto -l'
-alias lla='ls --color=auto -la'
-alias lal='ls --color=auto -al'
-alias lsd='ls -l|grep "^d"'
+alias    l='ls --color=auto'
+alias   la='ls --color=auto -a'
+alias   ll='ls --color=auto -l'
+alias  lla='ls --color=auto -la'
+alias  lal='ls --color=auto -al'
+alias  lsd='ls -l|grep "^d"'
+alias lsda='ls -la|grep "^d"'
 
 # eza aliases
 if command -v eza >/dev/null 2>&1; then
