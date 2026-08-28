@@ -10,7 +10,7 @@ Software that we store configs for, or use (though nothing is mandatory):
 - btop ([https://github.com/aristocratos/btop](https://github.com/aristocratos/btop))
 - duf ([https://github.com/muesli/duf](https://github.com/muesli/duf))
 - eza ([https://github.com/eza-community/eza](https://github.com/eza-community/eza))
-- fd ([https://github.com/sharkdp/fd](https://github.com/sharkdp/fd))
+- fd* ([https://github.com/sharkdp/fd](https://github.com/sharkdp/fd))
 - fzf* ([https://github.com/junegunn/fzf](https://github.com/junegunn/fzf))
 - lazygit ([https://github.com/jesseduffield/lazygit](https://github.com/jesseduffield/lazygit))
 - mc ([https://midnight-commander.org/](https://midnight-commander.org/))
