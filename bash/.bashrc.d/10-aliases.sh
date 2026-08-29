@@ -37,6 +37,7 @@ alias lsda='ls -la|grep "^d"'
 if command -v eza >/dev/null 2>&1; then
    alias ls='eza -F --group-directories-first --icons=auto --git --color-scale=all --time-style=long-iso'
    alias tree='eza --tree --icons=auto --color=auto'
+	alias otree='command tree'
    alias lsd='ls -D'
    alias lsda='ls -Da'
 fi
