@@ -8,6 +8,7 @@
 [[ -f "$HOME/.bashrc.d/theme-eza.inc" ]] && source "$HOME/.bashrc.d/theme-eza.inc"
 [[ -f "$HOME/.bashrc.d/theme-fzf.inc" ]] && source "$HOME/.bashrc.d/theme-fzf.inc"
 [[ -f "$HOME/.bashrc.d/theme-bat.inc" ]] && source "$HOME/.bashrc.d/theme-bat.inc"
+[[ -f "$HOME/.bashrc.d/theme-jq.inc" ]] && source "$HOME/.bashrc.d/theme-jq.inc"
 
 # Do host specific stuff
 if [ -f "$HOME/.bashrc.d/host-prompt.inc" ]; then
