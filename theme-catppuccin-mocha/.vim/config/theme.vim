@@ -6,4 +6,4 @@ if &term =~# 'tmux' || &term =~# 'screen'
    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 endif
 
-colorscheme catppuccin_macchiato
+colorscheme catppuccin_mocha
