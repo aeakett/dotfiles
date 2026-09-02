@@ -13,8 +13,11 @@ syntax enable
 " Turn on line numbering
 set number
 
-" Display TABs as 3 spaces
-set tabstop=3
+" No tabs... 3 spaces!
+set tabstop=3      " Visual width of a actual tab character
+set shiftwidth=3   " Size of an indentation level in spaces
+set expandtab      " Use spaces instead of tabs
+
 
 " Highlight current line
 set cursorline

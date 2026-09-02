@@ -17,7 +17,6 @@ vim
 - look for other themes with good coverage
 - tweak bash history settings
 - is there anything we can tweak with shell completion?
-- tabs getting used for indentation in vim
 - I think there's a way to show indentation level in vim?
 - there's something about lazygit needing a config file touched after first setup... figure that out and document it
 - add jq
