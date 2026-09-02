@@ -52,12 +52,16 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'altercation/vim-colors-solarized'
 Plug 'ryanoasis/vim-devicons'
+Plug 'Yggdroot/indentLine'
 call plug#end()
 " https://github.com/junegunn/vim-plug
 " :PlugInstall to install the plugins
 " :PlugUpdate to install or update the plugins
 " :PlugDiff to review the changes from the last update
 " :PlugClean to remove plugins no longer in the list
+
+" Set indentation marker
+let g:indentLine_char_list = ['│', '▏', '|', '¦', '┆', '┊']
 
 " tell airline to use powerline symbols
 let g:airline_powerline_fonts = 1
