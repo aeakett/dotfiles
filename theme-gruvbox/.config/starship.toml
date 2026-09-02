@@ -1,5 +1,7 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
+add_newline = false
+
 format = """
 [](color_orange)\
 $character\
@@ -19,6 +21,7 @@ $git_status\
 
 [ ](fg:color_bg1)\
 """
+
 
 palette = 'gruvbox_dark'
 
