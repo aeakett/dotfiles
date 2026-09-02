@@ -28,8 +28,8 @@ set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_,space:·
 
 " Use relative line numbers
 if exists("&relativenumber")
-	set relativenumber
-	au BufReadPost * set relativenumber
+   set relativenumber
+   au BufReadPost * set relativenumber
 endif
 
 " don't show mode on command line since we're using airline
