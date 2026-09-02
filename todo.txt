@@ -21,6 +21,5 @@ vim
 - add jq
 - look at having extract() intelligently protecting from tar bombs
 - should have a theme that works in monochrome (or basic ansi colours?) and without a nerdfont
-- theme readme should mention that if you're going to use a theme, your terminal should be using that theme (for like ansi colours and stuff)
 
 
