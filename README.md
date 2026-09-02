@@ -20,6 +20,7 @@ Software that we store configs for, or use (though nothing is mandatory):
 - [tmux](https://github.com/tmux/tmux)
 - [yazi](https://yazi-rs.github.io/docs/configuration/overview/)
 - [zoxide](https://github.com/ajeetdsouza/zoxide)
+- [glow](https://github.com/charmbracelet/glow)
 
 Most of those can be installed from an OS-level package, or grabbed as a binary from github. The ones marked with "\*" have been seen to do weird things when installed from a package on Ubuntu.
 
