@@ -1,6 +1,4 @@
 
-Look into theming for:
- - ripgrep
 vim
  - airline themes
 
@@ -21,3 +19,6 @@ vim
 - should have a theme that works in monochrome (or basic ansi colours?) and without a nerdfont
 
 
+ripgrep's theming lives in its config file...
+ - maintain config in the config file: `export RIPGREP_CONFIG_PATH="$HOME/.config/ripgrep/config"`
+ - use an alias/function to specify another config file on the comman line: `rg() { command rg --config-path "$HOME/.config/ripgrep/colors" "$@" }
