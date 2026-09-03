@@ -12,13 +12,11 @@ vim
 - document all of the pieces of a theme
 - add conditional checks where needed
 - look at delta to see of it's something we'd use
-- look at glow to see if it's something we'd use
 - add light themes (solarized and gruvbox are a good place to start)
 - look for other themes with good coverage
 - tweak bash history settings
 - is there anything we can tweak with shell completion?
 - there's something about lazygit needing a config file touched after first setup... figure that out and document it
-- add jq
 - look at having extract() intelligently protecting from tar bombs
 - should have a theme that works in monochrome (or basic ansi colours?) and without a nerdfont
 
