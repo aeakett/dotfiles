@@ -6,3 +6,4 @@
    - Forgot which theme you currently have stowed? Check `~/.config/.dotTheme`.
 - If you're running `mc` or `btop`, you'll need to select the appropriate theme the first time you run the application.
 - It's probably best if your terminal (PuTTY, Alacritty, iTerm2, etc.) also uses that theme.
+- Want to build your own theme? See [theme-guide.md](theme-HOWTO.md).
