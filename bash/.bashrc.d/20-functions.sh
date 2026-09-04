@@ -3,30 +3,93 @@
 # extract most archives with one command
 # (also corrals the contents of files that are known to be tarbombs)
 extract () {
-   if [ -f $1 ] ; then
-      case $1 in
-         *.tar.bz2)   tar xvjf $1     ;;
-         *.tar.gz)    tar xvzf $1     ;;
-         *.tar)       tar xvf $1      ;;
-         *.tgz)       tar xvzf $1     ;;
-         *.tbz2)      tar xvjf $1     ;;
-         *.gz)        gunzip $1      ;;
-         *.bz2)       bunzip2 $1     ;;
-         *.rar)       unrar e $1     ;;
-         *.zip)       unzip $1       ;;
-         *.Z)         uncompress $1  ;;
-         *.7z)        7z x $1        ;;
-         *.cbr)       mkdir $1-extracted; cd $1-extracted; cp ../$1 ./; unrar e $1; rm $1; cd ..     ;;
-         *.cbz)       mkdir $1-extracted; cd $1-extracted; cp ../$1 ./; unzip $1; rm $1; cd ..       ;;
-         *.cb7)       mkdir $1-extracted; cd $1-extracted; cp ../$1 ./; 7z x $1; rm $1; cd ..        ;;
-         *.jar)       mkdir $1-extracted; cd $1-extracted; cp ../$1 ./; unzip $1; rm $1; cd ..       ;;
-         *.epub)      mkdir $1-extracted; cd $1-extracted; cp ../$1 ./; unzip $1; rm $1; cd ..       ;;
-			*.dmg)       hdiutil mount $1 ;;
-         *)           echo "'$1' cannot be extracted via extract()" ;;
-      esac
-   else
-      echo "'$1' is not a valid file"
-   fi
+    if [ -f "$1" ]; then
+        local archive_file="$1"
+        local archive_basename=$(basename "$archive_file")
+        local archive_name="${archive_basename%.*}"
+        
+        # Remove .tar if present to get a clean name for directory
+        if [[ "$archive_name" == *.tar ]]; then
+            archive_name="${archive_name%.*}"
+        fi
+
+        local num_top_level_entries=0
+        local requires_extracted_dir=false
+        local output_dir=""
+
+        case "$archive_file" in
+            *.tar.bz2|*.tar.gz|*.tar|*.tgz|*.tbz2)
+                # Count top-level entries for tar archives
+                num_top_level_entries=$(tar -tf "$archive_file" | awk -F'/' '{print $1}' | sort -u | wc -l)
+                ;;
+            *.zip|*.jar|*.epub|*.cbz)
+                # Count top-level entries for zip archives
+                # Match only real file entries (those with a time in the row)
+                num_top_level_entries=$(unzip -l "$archive_file" | grep -v '^__MACOSX/' | awk '/[0-9][0-9]:[0-9][0-9]/{print $NF}' | awk -F'/' '{print $1}' | sort -u | wc -l)
+                ;;
+            *.rar|*.cbr)
+                # Count top-level entries for rar archives
+                num_top_level_entries=$(unrar l "$archive_file" | grep -E '[d-]rw' | awk '{print $NF}' | awk -F'/' '{print $1}' | sort -u | wc -l)
+                ;;
+            *.7z|*.cb7)
+                # Count top-level entries for 7z archives (match rows with an attribute column)
+                num_top_level_entries=$(7z l "$archive_file" | grep -E '\.{4}[AD]' | awk '{print $NF}' | awk -F'/' '{print $1}' | sort -u | wc -l)
+                ;;
+            *.gz|*.bz2|*.Z)
+                # Single file archives, always extract directly
+                num_top_level_entries=1
+                ;;
+            *.dmg)
+                # DMG is a mount, not extraction, so skip bomb detection
+                echo "Mounting DMG: hdiutil mount "$archive_file""
+                hdiutil mount "$archive_file" || { echo "Error mounting DMG."; return 1; }
+                return 0
+                ;;
+            *)
+                echo "'$archive_file' cannot be extracted via extract()"
+                return 1
+                ;;
+        esac
+
+        if [ "$num_top_level_entries" -gt 1 ]; then
+            requires_extracted_dir=true
+            output_dir="./${archive_name}-extracted"
+            mkdir -p "$output_dir" || { echo "Error: Could not create directory $output_dir"; return 1; }
+            echo "Extracting '$archive_file' to '$output_dir'..."
+        else
+            echo "Extracting '$archive_file' to current directory..."
+            output_dir="." # Extract to current directory
+        fi
+
+        case "$archive_file" in
+            *.tar.bz2)   tar xvjf "$archive_file" -C "$output_dir" || { echo "Error extracting tar.bz2 archive."; rmdir "$output_dir" 2>/dev/null; return 1; } ;;
+            *.tar.gz)    tar xvzf "$archive_file" -C "$output_dir" || { echo "Error extracting tar.gz archive."; rmdir "$output_dir" 2>/dev/null; return 1; } ;;
+            *.tar)       tar xvf "$archive_file" -C "$output_dir" || { echo "Error extracting tar archive."; rmdir "$output_dir" 2>/dev/null; return 1; } ;;
+            *.tgz)       tar xvzf "$archive_file" -C "$output_dir" || { echo "Error extracting tgz archive."; rmdir "$output_dir" 2>/dev/null; return 1; } ;;
+            *.tbz2)      tar xvjf "$archive_file" -C "$output_dir" || { echo "Error extracting tbz2 archive."; rmdir "$output_dir" 2>/dev/null; return 1; } ;;
+            *.gz)        gunzip -c "$archive_file" > "$output_dir/${archive_basename%.gz}" || { echo "Error decompressing gz file."; return 1; } ;;
+            *.bz2)       bunzip2 -c "$archive_file" > "$output_dir/${archive_basename%.bz2}" || { echo "Error decompressing bz2 file."; return 1; } ;;
+            *.rar)       unrar x "$archive_file" "$output_dir" || { echo "Error extracting rar archive."; rmdir "$output_dir" 2>/dev/null; return 1; } ;;
+            *.zip)       unzip "$archive_file" -d "$output_dir" || { echo "Error extracting zip archive."; rmdir "$output_dir" 2>/dev/null; return 1; } ;;
+            *.Z)         uncompress -c "$archive_file" > "$output_dir/${archive_basename%.Z}" || { echo "Error decompressing Z file."; return 1; } ;;
+            *.7z)        7z x "$archive_file" -o"$output_dir" || { echo "Error extracting 7z archive."; rmdir "$output_dir" 2>/dev/null; return 1; } ;;
+            *.cbr)       unrar x "$archive_file" "$output_dir" || { echo "Error extracting cbr archive."; rmdir "$output_dir" 2>/dev/null; return 1; } ;;
+            *.cbz)       unzip "$archive_file" -d "$output_dir" || { echo "Error extracting cbz archive."; rmdir "$output_dir" 2>/dev/null; return 1; } ;;
+            *.cb7)       7z x "$archive_file" -o"$output_dir" || { echo "Error extracting cb7 archive."; rmdir "$output_dir" 2>/dev/null; return 1; } ;;
+            *.jar)       unzip "$archive_file" -d "$output_dir" || { echo "Error extracting jar archive."; rmdir "$output_dir" 2>/dev/null; return 1; } ;;
+            *.epub)      unzip "$archive_file" -d "$output_dir" || { echo "Error extracting epub archive."; rmdir "$output_dir" 2>/dev/null; return 1; } ;;
+            *.dmg)       return 0 ;; # Already handled above
+            *)           echo "'$archive_file' cannot be extracted via extract() (unsupported format)"; return 1 ;;
+        esac
+
+        if $requires_extracted_dir && [ -z "$(ls -A "$output_dir" 2>/dev/null)" ]; then
+            echo "Warning: '$output_dir' is empty after extraction. Removing empty directory."
+            rmdir "$output_dir"
+        fi
+    else
+        echo "'$1' is not a valid file"
+        return 1
+    fi
 }
 
 # list the contents of various archives

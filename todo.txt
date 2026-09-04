@@ -15,7 +15,6 @@ vim
 - tweak bash history settings
 - is there anything we can tweak with shell completion?
 - there's something about lazygit needing a config file touched after first setup... figure that out and document it
-- look at having extract() intelligently protecting from tar bombs
 - should have a theme that works in monochrome (or basic ansi colours?) and without a nerdfont
 
 
