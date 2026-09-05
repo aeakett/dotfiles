@@ -1,0 +1,48 @@
+# ==============================================================================
+# Alacritty Low-Resource Windows-Comfort Configuration
+# ==============================================================================
+import = ["~/.config/alacritty/theme.toml"]
+
+[window]
+# Removes the system window borders for a cleaner look if desired
+# Options: "Full", "None", "Transparent"
+decorations = "Full"
+#opacity = 0.95 # Slight modern transparency (1.0 is fully solid)
+
+[font]
+size = 11.0
+# Linux Mint uses 'Monospace' or 'DejaVu Sans Mono' by default
+normal = { family = "FiraCode Nerd Font Propo", style = "Regular" }
+
+# ==============================================================================
+# Keyboard Shortcuts (Keyboard Bindings)
+# ==============================================================================
+# This rebinds Ctrl+C and Ctrl+V to act like Windows.
+# Note: To interrupt a running process in Linux, you will now use Ctrl+Shift+C.
+
+[[keyboard.bindings]]
+chars = "\u0003" # Sends the copy signal to the system clipboard
+key = "C"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "Paste"
+key = "V"
+mods = "Control"
+
+# Built-in font scaling (Ctrl + Plus, Ctrl + Minus, Ctrl + 0)
+[[keyboard.bindings]]
+action = "IncreaseFontSize"
+key = "Equals"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "DecreaseFontSize"
+key = "Minus"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "ResetFontSize"
+key = "Key0"
+mods = "Control"
+
