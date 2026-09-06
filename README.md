@@ -9,7 +9,7 @@ Software that we store configs for, or use (though nothing is mandatory):
 - [bat\*](https://github.com/sharkdp/bat)
 - [btop](https://github.com/aristocratos/btop)
 - [duf](https://github.com/muesli/duf)
-- [eza](https://github.com/eza-community/eza)
+- [eza\*](https://github.com/eza-community/eza)
 - [fd\*](https://github.com/sharkdp/fd)
 - [fzf\*](https://github.com/junegunn/fzf)
 - [lazygit](https://github.com/jesseduffield/lazygit)
