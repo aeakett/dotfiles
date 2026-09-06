@@ -1,5 +1,7 @@
 # Path, exports, and environment variables
 
+export COLORTERM=truecolor
+
 # add bash completion
 if [ -f "/usr/share/bash-completion/bash_completion" ]; then
    source /usr/share/bash-completion/bash_completion
