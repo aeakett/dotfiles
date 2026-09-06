@@ -1,12 +1,14 @@
 tokyo_night-storm
 
+- [ ] alacritty
 - [x] bat
 - [x] btop (baked in)
 - [ ] duf
 - [x] eza
 - [x] fzf
 - [x] glow
-- [ ] jq
+- [x] jq
+- [x] kitty
 - [x] lazygit
 - [ ] lscolors
 - [x] mc
