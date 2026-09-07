@@ -63,6 +63,8 @@ call plug#end()
 
 " Set indentation marker
 let g:indentLine_char_list = ['│', '▏', '|', '¦', '┆', '┊']
+" indentation markers do weird things in JSON, so don't even use them there
+let g:indentLine_fileTypeExclude = ['json', 'jsonc']
 
 " tell airline to use powerline symbols
 let g:airline_powerline_fonts = 1
