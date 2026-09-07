@@ -3,7 +3,7 @@ tokyo_night-storm
 - [ ] alacritty
 - [x] bat
 - [x] btop (baked in)
-- [ ] duf
+- [x] duf
 - [x] eza
 - [x] fzf
 - [x] glow
@@ -12,7 +12,7 @@ tokyo_night-storm
 - [x] lazygit
 - [ ] lscolors
 - [x] mc
-- [ ] ncdu
+- [x] ncdu
 - [x] starship
 - [x] tmux
 - [x] vim
