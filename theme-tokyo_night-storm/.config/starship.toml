@@ -24,12 +24,16 @@ format = '[ $user]($style)'
 [hostname]
 style = "bg:#a3aed2 fg:#090c0c"
 format = '[$hostname ]($style)'
-aliases = { "s-bor-vpi151000" = "ssm-webprod",
-            "s-ssm-vdi151200" = "ssm-webdev",
-            "W-SSM-A096925" = "odemin",
-            "s-bor-vpa151250" = "ledum",
-            "s-bor-vpq151251" = "postgres",
-            "lomax" ="lomax󱝠"}
+aliases = { "s-bor-vpi151000" = "ssm-webprod 󰯊",
+            "s-ssm-vdi151200" = "ssm-webdev ",
+            "W-SSM-A096925" = "odemin 󰇅",
+            "W-SSM-A096960" = "tsuga 󰇅",
+            "rubus" = "rubus 󰇅",
+            "picea" = "picea 󰇅",
+            "salix" = "salix 󰇅",
+            "s-bor-vpa151250" = "ledum 󰒍",
+            "s-bor-vpq151251" = "postgres ",
+            "lomax" ="lomax 󱝠" }
 ssh_only = false
 
 [directory]
