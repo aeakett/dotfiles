@@ -1,0 +1,6 @@
+# Set the color scheme.
+# The following schemes are recognized:
+#    off to disable colors
+#    dark for a color scheme intended for dark backgrounds
+#    dark-bg for a variation of the dark color scheme that also works in terminals with a light background.
+--color dark

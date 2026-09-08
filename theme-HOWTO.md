@@ -193,26 +193,26 @@ colorscheme catppuccin_latte
 This shows what the existing themes actually ship, so you can copy the pattern
 that fits your goal.
 
-| Package | gruvbox | solarized | cat-latte | cat-frappe | cat-macchiato | cat-mocha |
-|---|:-:|:-:|:-:|:-:|:-:|:-:|
-| `.dotTheme` (required) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| fzf | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| eza | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| LS_COLORS | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| bat (env only) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| jq | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| glow | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| starship | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| lazygit | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| yazi | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| tmux | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| vim | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| dircolors (`.dir_colors`) | ✅ | ✅ | — | — | — | — |
-| bat (ships `.tmTheme`) | — | — | ✅ | ✅ | ✅ | ✅ |
-| btop | — | — | ✅ | ✅ | ✅ | ✅ |
-| mc skin | — | — | ✅ | ✅ | ✅ | ✅ |
-| ncdu | — | — | ✅ | — | — | — |
-| duf | — | — | ✅ | — | — | — |
+| Package | gruvbox | solarized | cat-latte | cat-frappe | cat-macchiato | cat-mocha | tokyo-dark |
+|---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| `.dotTheme` (required) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| fzf | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| eza | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| LS_COLORS | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | — |
+| bat (env only) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| jq | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| glow | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| starship | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| lazygit | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| yazi | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| tmux | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | — |
+| vim | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | — |
+| dircolors (`.dir_colors`) | ✅ | ✅ | — | — | — | — | — |
+| bat (ships `.tmTheme`) | — | — | ✅ | ✅ | ✅ | ✅ | ✅ |
+| btop | — | — | ✅ | ✅ | ✅ | ✅ | ✅ |
+| mc skin | — | — | ✅ | ✅ | ✅ | ✅ | ✅ |
+| ncdu | — | — | ✅ | — | — | — | ✅ |
+| duf | — | — | ✅ | — | — | — | ✅ |
 
 **Observations that shape new themes:**
 - `gruvbox` & `solarized` are **lean core** themes (shell-env + common tools +
