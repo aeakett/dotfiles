@@ -1,0 +1,61 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = false
+
+format = """
+[░▒▓](#828bb8)\
+$username\
+[@](bg:#828bb8 fg:#090c0c)\
+$hostname\
+[](bg:#82aaff fg:#828bb8)\
+$directory\
+[](fg:#82aaff bg:#2f334d)\
+$git_branch\
+$git_status\
+[](fg:#2f334d bg:#222436)\
+\n$character"""
+
+[username]
+show_always = true
+style_user = "bg:#828bb8 fg:#090c0c"
+style_root = "bg:#828bb8 fg:#090c0c"
+format = '[ $user]($style)'
+
+[hostname]
+style = "bg:#828bb8 fg:#090c0c"
+format = '[$hostname ]($style)'
+aliases = { "s-bor-vpi151000" = "ssm-webprod 󰯊",
+            "s-ssm-vdi151200" = "ssm-webdev ",
+            "W-SSM-A096925" = "odemin 󰇅",
+            "W-SSM-A096960" = "tsuga 󰇅",
+            "rubus" = "rubus 󰇅",
+            "picea" = "picea 󰇅",
+            "salix" = "salix 󰇅",
+            "s-bor-vpa151250" = "ledum 󰒍",
+            "s-bor-vpq151251" = "postgres ",
+            "lomax" ="lomax 󱝠" }
+ssh_only = false
+
+[directory]
+style = "fg:#c8d3f5 bg:#82aaff"
+read_only_style = "fg:#c8d3f5 bg:#82aaff"
+read_only = ""
+format = "[ $path]($style)[ $read_only ]($read_only_style)"
+truncation_length = 6
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+"Developer" = "󰲋 "
+
+[git_branch]
+symbol = ""
+style = "bg:#2f334d"
+format = '[[ $symbol $branch ](fg:#82aaff bg:#2f334d)]($style)'
+
+[git_status]
+style = "bg:#2f334d"
+format = '[[($all_status$ahead_behind )](fg:#82aaff bg:#2f334d)]($style)'

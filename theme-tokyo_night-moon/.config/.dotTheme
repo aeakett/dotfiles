@@ -1,0 +1,19 @@
+tokyo_night-moon
+
+- [ ] alacritty
+- [x] bat
+- [x] btop (baked in)
+- [x] duf
+- [x] eza
+- [x] fzf
+- [x] glow
+- [x] jq
+- [x] kitty
+- [x] lazygit
+- [ ] lscolors
+- [x] mc
+- [x] ncdu
+- [x] starship
+- [ ] tmux (handled separately)
+- [ ] vim (handled separately)
+- [x] yazi
