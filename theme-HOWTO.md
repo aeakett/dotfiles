@@ -259,3 +259,76 @@ that fits your goal.
 - [ ] `stow -D <old-theme>` then `stow theme-<name>`
 - [ ] Reloaded the shell; ran `mc`/`btop` once to select the theme in-app
 - [ ] `cat ~/.config/.dotTheme` shows the expected name
+
+
+
+
+
+
+
+
+
+
+---
+### scratch notes for future edits
+
+- LS_COLORS
+   - .bashrc.d/theme-lscolors.inc
+      - contains the export of the LS_COLORS vaiable
+- eza
+   - .bashrc.d/theme-erzxa.inc
+      - just unsets LS_COLORS
+   - .config/eza/theme.yml
+      - the actual theme... generated or downloaded from somewhere
+- fzf
+   - .bashrc.d/theme-fzf.inc
+      - exports the variable the contains the config
+      - there's an excellent theme generator [here](https://vitormv.github.io/fzf-themes/)
+- bat
+   - .bashrc.d/theme-bat.inc
+      - exports name of BAT_THEME
+   - .config/bat/themes/<name>.tmTheme
+      - if we're not using a built-in theme, we put it here.
+      - this is an old Sublime Text formatted theme
+- jq
+   - .bashrc.d/theme-jq.inc
+      - exports JQ_COLORS.
+      - newer jq's (1.7+) can handle fancy colours, but stick to the 16-colour style.
+- duf
+   - /bashrd.d/theme-duf.inc
+      - basically just sets an alias to specify a light or dark output style
+- glow
+   - .bashrc.d/theme-glow.inc
+      - sets an alias so we can cheat seperation of the colour scheme from other config
+   - .config/glow/theme.json
+      - if we're using a custom (not built-in) theme, it goes here
+- lazygit
+   - .config/lazygit/theme.yml
+      - the actual theme that you generated or downloaded form somewhere
+- bash/starship
+   - .config/starship.toml
+      - that's it... that's the file
+- yazi
+   - .config/yazi/flavors/theme.yazi/flavor.toml
+      - the main theme file
+   - .config/yazi/flavors/theme.yazi/tmtheme.xml
+      - this is the theme for code in the preview pane
+      - this is an old Sublime Text formatted theme with a specific file name
+- btop
+   - .config/btop/themes/<name>.theme
+      - the theme that you made or got from somewhere
+- mc
+   - .local/share/mc/skins/<name>.ini
+      - the theme that you made or grabbed from somewhere
+- ncdu
+   - .config/ncdu/config
+      - just sets whether to output in a light or dark friendly way
+- dir_colors
+   - if you have a .dir_colors file, dump it in the root
+- tmux
+   - .tmux/custom_themes/custom_theme.conf
+      - we use the catppuccin tmux plugin as a framework for creating our own colour schemes. Grab a copy of this file from an existing theme and modify the colours.
+- vim
+   - start by finding a vim plugin for your desired theme and install it
+   - .vim/config/theme.vim
+      -this is where you set up the scheme for vim (one fo the tokyo night themes is a good example)

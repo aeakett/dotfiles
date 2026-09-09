@@ -21,3 +21,10 @@ vim
 ripgrep's theming lives in its config file...
  - maintain config in the config file: `export RIPGREP_CONFIG_PATH="$HOME/.config/ripgrep/config"`
  - use an alias/function to specify another config file on the comman line: `rg() { command rg --config-path "$HOME/.config/ripgrep/colors" "$@" }
+
+There's some figuring out to do with .dir_colors, LS_COLORS, and eza.
+   - .dir_colors generates LS_COLORS
+      - you can point it at a file, or run it bare and have it generate defaults
+   - LS_COLORS is used by other things, including `fd`
+   - eza will use LS_COLORS in preference to it's own theme colours
+   - so it seems like colours from a theme need to be brought into LS_COLORS
