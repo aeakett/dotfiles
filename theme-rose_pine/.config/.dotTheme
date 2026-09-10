@@ -1,1 +1,19 @@
 rose_pine
+
+- [ ] alacritty
+- [x] bat
+- [ ] btop
+- [x] duf
+- [x] eza
+- [x] fzf
+- [x] glow (from https://github.com/drluckyspin/rose-pine-glow)
+- [ ] jq
+- [ ] kitty
+- [x] lazygit
+- [ ] lscolors
+- [ ] mc
+- [x] ncdu
+- [x] starship
+- [x] tmux
+- [x] vim
+- [ ] yazi
