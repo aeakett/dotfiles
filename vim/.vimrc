@@ -54,6 +54,7 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'ghifarit53/tokyonight-vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'Yggdroot/indentLine'
+Plug 'rose-pine/vim'
 call plug#end()
 " https://github.com/junegunn/vim-plug
 " :PlugInstall to install the plugins
