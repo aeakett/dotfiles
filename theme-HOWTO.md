@@ -287,7 +287,7 @@ that fits your goal.
 - bat
    - .bashrc.d/theme-bat.inc
       - exports name of BAT_THEME
-   - .config/bat/themes/<name>.tmTheme
+   - .config/bat/themes/\<name\>.tmTheme
       - if we're not using a built-in theme, we put it here.
       - this is an old Sublime Text formatted theme
 - jq
@@ -315,10 +315,10 @@ that fits your goal.
       - this is the theme for code in the preview pane
       - this is an old Sublime Text formatted theme with a specific file name
 - btop
-   - .config/btop/themes/<name>.theme
+   - .config/btop/themes/\<name\>.theme
       - the theme that you made or got from somewhere
 - mc
-   - .local/share/mc/skins/<name>.ini
+   - .local/share/mc/skins/\<name\>.ini
       - the theme that you made or grabbed from somewhere
 - ncdu
    - .config/ncdu/config
@@ -331,4 +331,4 @@ that fits your goal.
 - vim
    - start by finding a vim plugin for your desired theme and install it
    - .vim/config/theme.vim
-      -this is where you set up the scheme for vim (one fo the tokyo night themes is a good example)
+      - this is where you set up the scheme for vim (one fo the tokyo night themes is a good example)
