@@ -21,6 +21,9 @@ vim
 ripgrep's theming lives in its config file...
  - maintain config in the config file: `export RIPGREP_CONFIG_PATH="$HOME/.config/ripgrep/config"`
  - use an alias/function to specify another config file on the comman line: `rg() { command rg --config-path "$HOME/.config/ripgrep/colors" "$@" }
+ - you can set colours on path, line, column (not in default output), match, and highlight (in the default output, this is just the non-matching part of the line, but if you're outputting lines of context, it highlights the matching line's non-matching parts)
+ - bg and fg colors can both be set... either by name, or by rgb triplet
+ - style can also be set to (no)bold, (no)underline, and (no)italic
 
 There's some figuring out to do with .dir_colors, LS_COLORS, and eza.
    - .dir_colors generates LS_COLORS
