@@ -332,3 +332,5 @@ that fits your goal.
    - start by finding a vim plugin for your desired theme and install it
    - .vim/config/theme.vim
       - this is where you set up the scheme for vim (one fo the tokyo night themes is a good example)
+- rofi
+   - you don't have to have a rofi theme, but you do need to have at least an empty `.config/rofi/theme.razi`
