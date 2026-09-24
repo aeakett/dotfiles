@@ -334,3 +334,6 @@ that fits your goal.
       - this is where you set up the scheme for vim (one fo the tokyo night themes is a good example)
 - rofi
    - you don't have to have a rofi theme, but you do need to have at least an empty `.config/rofi/theme.razi`
+- polybar
+   - you don't need to have a polybar theme, but you do need to have at least an empty `.config/polybar/colors.ini`:w
+
