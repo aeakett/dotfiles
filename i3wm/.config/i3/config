@@ -36,7 +36,12 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 
 # Do window gaps if our version supports it
-exec_always --no-startup-id bash -c 'if [ "$(i3 --version | awk "{print \$3}" | cut -d. -f1-2 | tr -d -)" \>= "4.22" ]; then i3-msg "gaps inner 10; gaps outer 5; smart_gaps on"; fi'
+#exec_always --no-startup-id bash -c 'if [ "$(i3 --version | awk "{print \$3}" | cut -d. -f1-2 | tr -d -)" \>= "4.22" ]; then i3-msg "gaps inner all set 10; smart_gaps on "; fi'
+exec_always --no-startup-id bash -c 'if [ "$(printf "4.22\n$(i3 --version | awk "{print \$3}" | cut -d- -f1)" | sort -V | head -n1)" = "4.22" ]; then i3-msg "gaps inner all set 10"; fi'
+#exec_always --no-startup-id bash -c 'if [ "$(i3 --version | awk "{print \$3}" | cut -d. -f1-2 | tr -d -)" \>= "4.22" ]; then i3-msg "gaps inner all set 10"; fi'
+# gaps inner 10
+# gaps outer 5
+# smart_gaps on
 
 # Start picom if installed
 exec_always --no-startup-id command -v picom >/dev/null 2>&1 && picom -b
@@ -67,9 +72,8 @@ floating_modifier $mod
 # or left-clicking anywhere into the window while holding the floating modifier.
 #tiling_drag modifier titlebar
 
-# start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
-#bindsym $mod+Return exec kitty
+# start a terminal (kitty if we have it, otherwise fall back to i3-sensible-terminal)
+bindsym $mod+Return exec sh -c 'command -v kitty >/dev/null 2>&1 && kitty || i3-sensible-terminal'
 
 # kill focused window
 bindsym $mod+Shift+q kill
