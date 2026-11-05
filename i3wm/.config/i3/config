@@ -213,4 +213,15 @@ bindsym $mod+r mode "resize"
 #bar {
 #        status_command i3status
 #}
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+#exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
+# Launch Polybar if available, otherwise fallback to i3status
+exec_always --no-startup-id bash -c "if command -v polybar >/dev/null 2>&1; then killall -q polybar; $HOME/.config/polybar/launch.sh & else i3-msg 'bar mode dock'; fi"
+
+# Default i3bar configuration (used as the fallback)
+bar {
+   status_command i3status
+   # Optional: hides the default i3bar if Polybar successfully runs
+   # i3-msg will automatically handle turning it on if Polybar is missing
+}
+
