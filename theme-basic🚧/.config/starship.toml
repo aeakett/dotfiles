@@ -1,0 +1,89 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = false
+
+format = """
+$character\
+$username\
+[@](bg:bright-white fg:bright-black)\
+$hostname\
+$directory\
+[ ](bg:bright-black fg:bright-white)\
+$git_branch\
+$git_status\
+[▓▒░ ](bg:black fg:bright-black)[> ](bg:black fg:bright-white)\
+"""
+
+[username]
+show_always = true
+style_user = "bg:bright-white fg:bright-black"
+style_root = "bg:#828bb8 fg:#090c0c"
+format = '[ $user]($style)'
+
+[hostname]
+style = "bg:bright-white fg:bright-black"
+format = '[$hostname ]($style)'
+aliases = { "s-bor-vpi151000" = "ssm-webprod",
+            "s-ssm-vdi151200" = "ssm-webdev",
+            "W-SSM-A096925" = "odemin",
+            "W-SSM-A096960" = "tsuga",
+            "rubus" = "rubus",
+            "picea" = "picea",
+            "salix" = "salix",
+            "s-bor-vpa151250" = "ledum",
+            "s-bor-vpq151251" = "postgres",
+            "lomax" ="lomax" }
+ssh_only = false
+
+[directory]
+style = "bg:white fg:black"
+read_only_style = "bg:white fg:red"
+read_only = "ro"
+format = "[ $path]($style)[ $read_only ]($read_only_style)"
+truncation_length = 6
+truncation_symbol = ".../"
+
+[character]
+disabled = false
+format = "$symbol"
+success_symbol = '[](bold bg:bright-white fg:red)'
+error_symbol = '[ X](bold bg:bright-white fg:red)'
+vimcmd_symbol = "[<](bold green)"
+vimcmd_visual_symbol = "[<](bold yellow)"
+vimcmd_replace_symbol = "[<](bold purple)"
+
+[git_commit]
+tag_symbol = " tag "
+
+[git_branch]
+symbol = "Y"
+style = "bg:bright-black fg:bright-white"
+truncation_symbol = "..."
+format = '[$symbol $branch ]($style)'
+
+[git_status]
+disabled = false
+style = "bg:bright-black fg:bright-white"
+ahead = ">"
+behind = "<"
+diverged = "<>"
+renamed = "r"
+deleted = "x"
+format = '[($all_status$ahead_behind )]($style)'
+
+[hg_branch]
+symbol = "hg "
+truncation_symbol = "..."
+
+[jobs]
+symbol = "*"
+
+[memory_usage]
+symbol = "memory "
+
+[status]
+symbol = "[x](bold red) "
+not_executable_symbol = "noexec"
+not_found_symbol = "notfound"
+sigint_symbol = "sigint"
+signal_symbol = "sig"
