@@ -1,0 +1,29 @@
+# screen-style prefix key
+set -g prefix C-a
+
+# reload config
+bind r display-message "bare bones config"
+
+# Allows for faster key repetition
+set -s escape-time 0
+
+# last window
+bind-key C-a last-window
+
+# Start window numbering at 1
+set -g base-index 1
+# Start pane numbering at 1
+set -g pane-base-index 1
+
+# Renumber all windows when one is closed
+set -g renumber-windows on
+
+# move status bar to top
+set-option -g status-position bottom
+
+# hjkl pane traversal
+bind h select-pane -L
+bind j select-pane -D
+bind k select-pane -U
+bind l select-pane -R
+
