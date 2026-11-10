@@ -12,6 +12,7 @@
 [[ -f "$HOME/.bashrc.d/theme-duf.inc" ]] && source "$HOME/.bashrc.d/theme-duf.inc"
 [[ -f "$HOME/.bashrc.d/theme-glow.inc" ]] && source "$HOME/.bashrc.d/theme-glow.inc"
 [[ -f "$HOME/.bashrc.d/theme-tmux.inc" ]] && source "$HOME/.bashrc.d/theme-tmux.inc"
+[[ -f "$HOME/.bashrc.d/theme-vim.inc" ]] && source "$HOME/.bashrc.d/theme-vim.inc"
 
 # Do host specific stuff
 if [ -f "$HOME/.bashrc.d/host-prompt.inc" ]; then

@@ -1,0 +1,29 @@
+" Disable vi compatibility, if for some reason it's on.
+set nocompatible
+
+" Start searching before pressing enter.
+set incsearch
+
+" Ensure UTF-8 encoding is enabled to render Powerline symbols correctly
+set encoding=utf-8
+
+" Enable syntax highlighting
+syntax enable
+
+" Turn on line numbering
+set number
+
+" No tabs... 3 spaces!
+set tabstop=3      " Visual width of a actual tab character
+set shiftwidth=3   " Size of an indentation level in spaces
+set expandtab      " Use spaces instead of tabs
+
+" Highlight current line
+set cursorline
+
+" Use relative line numbers
+if exists("&relativenumber")
+   set relativenumber
+   au BufReadPost * set relativenumber
+endif
+

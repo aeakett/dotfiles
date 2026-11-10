@@ -1,0 +1,19 @@
+basic
+
+- [ ] alacritty
+- [x] bat
+- [ ] btop
+- [x] duf
+- [x] eza
+- [x] fzf
+- [ ] glow
+- [x] jq
+- [ ] kitty
+- [ ] lazygit
+- [x] lscolors
+- [ ] mc
+- [x] ncdu
+- [x] starship
+- [x] tmux
+- [x] vim
+- [ ] yazi
