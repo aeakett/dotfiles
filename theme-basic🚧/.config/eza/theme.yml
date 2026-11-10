@@ -1,0 +1,75 @@
+colourful: true
+
+# Core file types using standard ANSI names
+filekinds:
+  directory:
+    foreground: blue
+    is_bold: true
+  file:
+    foreground: white
+  symlink:
+    foreground: cyan
+  executable:
+    foreground: green
+    is_bold: true
+  lossless:
+    foreground: magenta
+
+# File permissions (rwxrwxrwx)
+perms:
+  user_read:
+    foreground: green
+  user_write:
+    foreground: yellow
+  user_execute:
+    foreground: red
+    is_bold: true
+  group_read:
+    foreground: green
+    is_dimmed: true
+  group_write:
+    foreground: yellow
+    is_dimmed: true
+  group_execute:
+    foreground: red
+    is_dimmed: true
+  other_read:
+    foreground: green
+    is_dimmed: true
+  other_write:
+    foreground: yellow
+    is_dimmed: true
+  other_execute:
+    foreground: red
+    is_dimmed: true
+
+# File Sizes, Dates, and Punctuation
+size:
+  number:
+    foreground: yellow
+  unit:
+    foreground: yellow
+    is_dimmed: true
+date:
+  foreground: cyan
+punctuation:
+  foreground: white
+  is_dimmed: true
+header:
+  foreground: white
+  is_bold: true
+  is_underline: true
+
+# Git Status mappings
+git:
+  new:
+    foreground: green
+  modified:
+    foreground: yellow
+  deleted:
+    foreground: red
+  renamed:
+    foreground: cyan
+  typechange:
+    foreground: magenta
+
